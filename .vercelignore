@@ -1,0 +1,8 @@
+.git
+.DS_Store
+**/.DS_Store
+contact/
+v2/contact.php
+v2/guide.php
+v2/.htaccess
+scripts/

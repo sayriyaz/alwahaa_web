@@ -1,0 +1,11 @@
+.DS_Store
+**/.DS_Store
+.vercel
+.env
+.env.*
+!.env.example
+contact/submissions.php
+contact/submissions.log.php
+contact/*.log
+v2/router.php
+.claude/

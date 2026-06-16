@@ -1,0 +1,14 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^blog/?$ blog.html [L]
+RewriteRule ^contact/?$ contact.php [L]
+RewriteRule ^blog/mainland-company-dubai/?$ mainland-company-dubai.html [L,QSA]
+RewriteRule ^blog/uae-golden-visa/?$ golden-visa-uae.html [L,QSA]
+RewriteRule ^blog/free-zone-vs-mainland-dubai/?$ guide.php?topic=free-zone-vs-mainland [L,QSA]
+RewriteRule ^blog/document-attestation-uae/?$ guide.php?topic=document-attestation [L,QSA]
+RewriteRule ^blog/corporate-tax-vat-uae/?$ guide.php?topic=corporate-tax-vat [L,QSA]
+RewriteRule ^blog/family-visa-emirates-id-uae/?$ guide.php?topic=family-visa-emirates-id [L,QSA]
+RewriteRule ^blog/pro-services-dubai/?$ guide.php?topic=pro-services-dubai [L,QSA]
