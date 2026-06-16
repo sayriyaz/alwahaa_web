@@ -143,9 +143,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         @file_put_contents($log_path, $log_line, FILE_APPEND | LOCK_EX);
 
         if ($mail_sent) {
+            // Best-effort confirmation auto-reply to the client (never blocks success).
+            $client_config = $smtp_config;
+            $client_config['to_email'] = $email;
+            $client_config['from_name'] = 'Alwahaa Documents Clearing';
+            $autoreply_body = "Dear {$name},\n\n"
+                . "Thank you for contacting Alwahaa Documents Clearing.\n"
+                . "Your message has been received and our team will get back to you shortly.\n\n"
+                . "Your message:\n{$message}\n\n"
+                . "Warm regards,\n"
+                . "Alwahaa Documents Clearing\n"
+                . "+971 4 255 2895 \xC2\xB7 info@alwahaagroup.com\n"
+                . "www.alwahaagroup.com\n";
+            @smtp_send_mail($client_config, 'Alwahaa Documents Clearing', $smtp_config['to_email'], 'We received your enquiry — Alwahaa Documents Clearing', $autoreply_body);
+
             $_SESSION['contact_success'] = [
                 'name' => $name,
-                'delivery_note' => 'Your message has been sent to info@alwahaagroup.com. We will get back to you shortly.'
+                'delivery_note' => 'Your message has been sent to info@alwahaagroup.com. We will get back to you shortly — a confirmation has also been emailed to you.'
             ];
             header('Location: ' . $_SERVER['PHP_SELF'] . '?sent=1');
             exit;

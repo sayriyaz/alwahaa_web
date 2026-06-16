@@ -36,6 +36,28 @@ async function command(socket, value, expectedCode) {
   }
 }
 
+// Send a single message over an already-authenticated SMTP session.
+async function sendMessage(socket, { fromName, fromEmail, to, replyTo, subject, body }) {
+  await command(socket, `MAIL FROM:<${fromEmail}>`, 250);
+  await command(socket, `RCPT TO:<${to}>`, 250);
+  await command(socket, "DATA", 354);
+  const mail = [
+    `From: ${fromName} <${fromEmail}>`,
+    `To: ${to}`,
+    ...(replyTo ? [`Reply-To: ${replyTo}`] : []),
+    `Subject: ${subject}`,
+    "MIME-Version: 1.0",
+    "Content-Type: text/plain; charset=UTF-8",
+    "",
+    body.replace(/^\./gm, ".."),
+    ".",
+    "",
+  ].join("\r\n");
+  socket.write(mail);
+  const result = await readResponse(socket);
+  if (!result.startsWith("250")) throw new Error("SMTP server did not accept the message");
+}
+
 async function sendMail({ name, email, phone, message }) {
   const host = process.env.SMTP_HOST || "smtp.zoho.com";
   const port = Number(process.env.SMTP_PORT || 587);
@@ -70,46 +92,65 @@ async function sendMail({ name, email, phone, message }) {
   await command(secureSocket, "AUTH LOGIN", 334);
   await command(secureSocket, Buffer.from(username).toString("base64"), 334);
   await command(secureSocket, Buffer.from(password).toString("base64"), 235);
-  await command(secureSocket, `MAIL FROM:<${fromEmail}>`, 250);
-  await command(secureSocket, `RCPT TO:<${toEmail}>`, 250);
-  await command(secureSocket, "DATA", 354);
 
   const safeName = name.replace(/[\r\n]/g, " ").trim();
   const safeEmail = email.replace(/[\r\n]/g, "").trim();
-  const subject = `New website enquiry from ${safeName}`;
-  const body = [
-    "New enquiry from the Alwahaa website:",
-    "",
-    `Name: ${safeName}`,
-    `Email: ${safeEmail}`,
-    `Phone: ${phone || "-"}`,
-    "",
-    "Message:",
-    message,
-  ].join("\r\n");
-  const mail = [
-    `From: Alwahaa Website <${fromEmail}>`,
-    `To: ${toEmail}`,
-    `Reply-To: ${safeName} <${safeEmail}>`,
-    `Subject: ${subject}`,
-    "MIME-Version: 1.0",
-    "Content-Type: text/plain; charset=UTF-8",
-    "",
-    body.replace(/^\./gm, ".."),
-    ".",
-    "",
-  ].join("\r\n");
 
-  secureSocket.write(mail);
-  const result = await readResponse(secureSocket);
+  // 1) Enquiry to the business inbox (this one must succeed).
+  await sendMessage(secureSocket, {
+    fromName: "Alwahaa Website",
+    fromEmail,
+    to: toEmail,
+    replyTo: `${safeName} <${safeEmail}>`,
+    subject: `New website enquiry from ${safeName}`,
+    body: [
+      "New enquiry from the Alwahaa website:",
+      "",
+      `Name: ${safeName}`,
+      `Email: ${safeEmail}`,
+      `Phone: ${phone || "-"}`,
+      "",
+      "Message:",
+      message,
+    ].join("\r\n"),
+  });
+
+  // 2) Confirmation auto-reply to the client (best effort — never fails the request).
+  try {
+    await command(secureSocket, "RSET", 250);
+    await sendMessage(secureSocket, {
+      fromName: "Alwahaa Documents Clearing",
+      fromEmail,
+      to: safeEmail,
+      replyTo: `Alwahaa Documents Clearing <${toEmail}>`,
+      subject: "We received your enquiry — Alwahaa Documents Clearing",
+      body: [
+        `Dear ${safeName},`,
+        "",
+        "Thank you for contacting Alwahaa Documents Clearing.",
+        "Your message has been received and our team will get back to you shortly.",
+        "",
+        "Your message:",
+        message,
+        "",
+        "Warm regards,",
+        "Alwahaa Documents Clearing",
+        "+971 4 255 2895 · info@alwahaagroup.com",
+        "www.alwahaagroup.com",
+      ].join("\r\n"),
+    });
+  } catch (autoReplyError) {
+    console.error("Auto-reply to client failed (non-fatal):", autoReplyError.message);
+  }
+
   secureSocket.write("QUIT\r\n");
   secureSocket.end();
-  if (!result.startsWith("250")) throw new Error("SMTP server did not accept the message");
 }
 
-function redirect(res, state) {
+function redirect(res, state, params = {}) {
+  const query = new URLSearchParams({ [state]: "1", ...params }).toString();
   res.statusCode = 303;
-  res.setHeader("Location", `/contact?${state}=1`);
+  res.setHeader("Location", `/contact?${query}`);
   res.end();
 }
 
@@ -131,7 +172,7 @@ export default async function handler(req, res) {
 
   try {
     await sendMail({ name, email, phone, message });
-    return redirect(res, "sent");
+    return redirect(res, "sent", { name: name.slice(0, 60) });
   } catch (error) {
     console.error("Contact form delivery failed:", error.message);
     return redirect(res, "error");

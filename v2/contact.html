@@ -233,16 +233,35 @@
   <script src="./assets/js/main.js?v=20260611b" defer></script>
   <script>
     (function () {
+      var params = new URLSearchParams(location.search);
+      function esc(s) {
+        return String(s).replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+      // Success: replace the form with a full thank-you card (matches the PHP version).
+      if (params.has('sent')) {
+        var wrap = document.getElementById('form');
+        if (!wrap) return;
+        var name = (params.get('name') || '').trim();
+        wrap.innerHTML =
+          '<div class="form-success">' +
+            '<div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>' +
+            '<h2>Thank you' + (name ? ', ' + esc(name) : '') + '!</h2>' +
+            '<p class="lead" style="margin:0 auto 1.6rem">Your message has been sent to info@alwahaagroup.com. We will get back to you shortly — a confirmation has also been emailed to you.</p>' +
+            '<a class="btn btn--ghost" href="./index.html" data-cursor>Back to home</a>' +
+          '</div>';
+        wrap.scrollIntoView({ block: 'center' });
+        return;
+      }
+      // Error states: inline alert above the form.
       var target = document.getElementById('deploymentFormStatus');
       if (!target) return;
-      var params = new URLSearchParams(location.search);
-      var copy = params.has('sent')
-        ? ['form-success', 'Message sent', 'Thank you. Your enquiry has been sent to the Alwahaa desk.']
-        : params.has('invalid')
-          ? ['form-alert error', 'Check the form', 'Please enter your name, a valid email address and a message.']
-          : params.has('error')
-            ? ['form-alert error', 'Message not sent', 'Please call, WhatsApp or email us directly while email delivery is unavailable.']
-            : null;
+      var copy = params.has('invalid')
+        ? ['form-alert error', 'Check the form', 'Please enter your name, a valid email address and a message.']
+        : params.has('error')
+          ? ['form-alert error', 'Message not sent', 'Please call, WhatsApp or email us directly while email delivery is unavailable.']
+          : null;
       if (copy) {
         target.className = copy[0];
         target.innerHTML = '<h2>' + copy[1] + '</h2><p>' + copy[2] + '</p>';
