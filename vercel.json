@@ -6,6 +6,13 @@
     { "source": "/v2/contact.php", "destination": "/contact", "permanent": false }
   ],
   "rewrites": [
+    { "source": "/blog/mainland-company-dubai", "destination": "/v2/mainland-company-dubai.html" },
+    { "source": "/blog/uae-golden-visa", "destination": "/v2/golden-visa-uae.html" },
+    { "source": "/blog/free-zone-vs-mainland-dubai", "destination": "/v2/free-zone-vs-mainland-dubai.html" },
+    { "source": "/blog/document-attestation-uae", "destination": "/v2/document-attestation-uae.html" },
+    { "source": "/blog/corporate-tax-vat-uae", "destination": "/v2/corporate-tax-vat-uae.html" },
+    { "source": "/blog/family-visa-emirates-id-uae", "destination": "/v2/family-visa-emirates-id-uae.html" },
+    { "source": "/blog/pro-services-dubai", "destination": "/v2/pro-services-dubai.html" },
     { "source": "/((?!api/).*)", "destination": "/v2/$1" }
   ],
   "headers": [
