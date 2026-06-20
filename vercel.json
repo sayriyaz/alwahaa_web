@@ -13,6 +13,7 @@
     { "source": "/blog/corporate-tax-vat-uae", "destination": "/v2/corporate-tax-vat-uae" },
     { "source": "/blog/family-visa-emirates-id-uae", "destination": "/v2/family-visa-emirates-id-uae" },
     { "source": "/blog/pro-services-dubai", "destination": "/v2/pro-services-dubai" },
+    { "source": "/blog/dubai-it-campaign", "destination": "/v2/dubai-it-campaign" },
     { "source": "/((?!api/).*)", "destination": "/v2/$1" }
   ],
   "headers": [
