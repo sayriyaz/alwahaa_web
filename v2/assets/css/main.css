@@ -807,6 +807,9 @@ body.cursor-active a, body.cursor-active button { cursor: none; }
 }
 .article__cover { border-radius: var(--r-lg); overflow: hidden; margin: 2rem 0; aspect-ratio: 16/8; box-shadow: var(--shadow-md); }
 .article__cover img { width: 100%; height: 100%; object-fit: cover; }
+/* Posters/infographics: show the whole image, no crop */
+.article__cover--poster { aspect-ratio: auto; }
+.article__cover--poster img { height: auto; object-fit: contain; }
 .article__body { font-size: 1.08rem; line-height: 1.8; color: var(--ink-soft); }
 .article__body > * + * { margin-top: 1.3rem; }
 .article__body h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-top: 2.6rem; color: var(--ink); }
