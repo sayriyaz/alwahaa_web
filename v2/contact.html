@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="stylesheet" href="./assets/css/main.css?v=20260611e" />
+  <link rel="stylesheet" href="./assets/css/main.css?v=20260627e" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,17 +81,16 @@
 
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="./index.html" aria-label="Alwahaa Documents Clearing home">
+      <a class="brand" href="/" aria-label="Alwahaa Documents Clearing home">
         <img src="./assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" />
         <span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span>
       </a>
       <div class="nav__links">
-        <a href="./about.html" data-cursor>About Us</a>
-        <a href="./index.html#services" data-cursor>Services</a>
-        <a href="./index.html#process" data-cursor>Process</a>
-        <a href="./index.html#faq" data-cursor>FAQ</a>
-        <a href="./blog.html" data-cursor>Newsroom</a>
-        <a href="./contact.php" data-cursor aria-current="page">Contact</a>
+        <a href="/about" data-cursor>About Us</a>
+        <a href="/#services" data-cursor>Services</a>
+        <a href="/resources">Resources</a>
+        <a href="/blog" data-cursor>Newsroom</a>
+        <a href="/contact" data-cursor aria-current="page">Contact</a>
       </div>
       <div class="nav__right">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" data-cursor>
@@ -104,12 +103,11 @@
   </header>
 
   <div class="mobile-nav" id="mobileNav">
-    <a href="./about.html"><span>01</span>About Us</a>
-    <a href="./index.html#services"><span>02</span>Services</a>
-    <a href="./index.html#process"><span>03</span>Process</a>
-    <a href="./index.html#faq"><span>04</span>FAQ</a>
-    <a href="./blog.html"><span>05</span>Newsroom</a>
-    <a href="./contact.php" aria-current="page"><span>06</span>Contact</a>
+    <a href="/about"><span>01</span>About Us</a>
+    <a href="/#services"><span>02</span>Services</a>
+    <a href="/resources"><span>03</span>Resources</a>
+    <a href="/blog"><span>04</span>Newsroom</a>
+    <a href="/contact" aria-current="page"><span>05</span>Contact</a>
   </div>
 
   <main>
@@ -188,24 +186,23 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <a class="brand" href="./index.html"><img src="./assets/img/logo.webp" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+          <a class="brand" href="/"><img src="./assets/img/logo.webp" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
           <p>Dubai business setup, visa, attestation and PRO services — handled end to end with calm precision since 1983.</p>
         </div>
         <div class="footer__col">
           <h4>Services</h4>
-          <a href="./index.html#services">Business Setup</a>
-          <a href="./index.html#services">Visa &amp; Immigration</a>
-          <a href="./index.html#services">PRO &amp; Government</a>
-          <a href="./index.html#catalog">Attestation</a>
-          <a href="./index.html#catalog">VAT &amp; Corporate Tax</a>
+          <a href="/#services">Business Setup</a>
+          <a href="/#services">Visa &amp; Immigration</a>
+          <a href="/#services">PRO &amp; Government</a>
+          <a href="/#services">Attestation</a>
+          <a href="/#services">VAT &amp; Corporate Tax</a>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
-          <a href="./index.html#story">About</a>
-          <a href="./index.html#why">Why Us</a>
-          <a href="./index.html#process">Process</a>
-          <a href="./index.html#faq">FAQ</a>
-          <a href="./contact.php" aria-current="page">Contact</a>
+          <a href="/#story">About</a>
+          <a href="/#why">Why Us</a>
+          <a href="/resources">Resources</a>
+          <a href="/contact" aria-current="page">Contact</a>
         </div>
         <div class="footer__col">
           <h4>Get in touch</h4>
@@ -249,7 +246,7 @@
             '<div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>' +
             '<h2>Thank you' + (name ? ', ' + esc(name) : '') + '!</h2>' +
             '<p class="lead" style="margin:0 auto 1.6rem">Your message has been sent to info@alwahaagroup.com. We will get back to you shortly — a confirmation has also been emailed to you.</p>' +
-            '<a class="btn btn--ghost" href="./index.html" data-cursor>Back to home</a>' +
+            '<a class="btn btn--ghost" href="/" data-cursor>Back to home</a>' +
           '</div>';
         wrap.scrollIntoView({ block: 'center' });
         return;

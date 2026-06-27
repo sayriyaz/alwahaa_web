@@ -384,6 +384,8 @@
     if (!canvas || typeof window.THREE === "undefined") return;
     hero3DDone = true;
     var THREE = window.THREE;
+    var compactGlobe = !!canvas.closest(".svc-globe");
+    var host = canvas.closest(".svc-globe") || doc.querySelector(".hero") || canvas.parentNode;
     var lowPower = isTouch || innerWidth < 760;
     if (prefersReduced) return;
 
@@ -399,10 +401,10 @@
     function themeColors() {
       var dark = root.getAttribute("data-theme") === "dark";
       return {
-        wire: dark ? 0x6f7c93 : 0x9fb0c8,
-        wireOpacity: dark ? 0.28 : 0.4,
+        wire: dark ? 0x6f7c93 : (compactGlobe ? 0x65758c : 0x9fb0c8),
+        wireOpacity: dark ? 0.28 : (compactGlobe ? 0.58 : 0.4),
         dots: dark ? 0xe4ce8e : 0xb08d3a,
-        field: dark ? 0xc8a24b : 0x6b7686
+        field: dark ? 0xc8a24b : (compactGlobe ? 0xb08d3a : 0x6b7686)
       };
     }
     var col = themeColors();
@@ -443,8 +445,8 @@
     scene.add(field);
 
     group.rotation.z = 0.35;
-    group.position.x = innerWidth > 900 ? 3.2 : 0;
-    group.position.y = innerWidth > 900 ? 0 : 1.4;
+    group.position.x = compactGlobe ? 0 : (innerWidth > 900 ? 3.2 : 0);
+    group.position.y = compactGlobe ? 0 : (innerWidth > 900 ? 0 : 1.4);
 
     var tmx = 0, tmy = 0, cmx = 0, cmy = 0;
     window.addEventListener("mousemove", function (e) {
@@ -460,17 +462,18 @@
     });
 
     var visible = true;
-    var hero = doc.querySelector(".hero");
-    if ("IntersectionObserver" in window && hero) {
-      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0.02 }).observe(hero);
+    if ("IntersectionObserver" in window && host) {
+      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0.02 }).observe(host);
     }
 
     function resize() {
-      var w = innerWidth, h = innerHeight;
+      var box = host && compactGlobe ? host.getBoundingClientRect() : null;
+      var w = box ? Math.max(280, box.width) : innerWidth;
+      var h = box ? Math.max(260, box.height) : innerHeight;
       camera.aspect = w / h; camera.updateProjectionMatrix();
       renderer.setSize(w, h, false);
-      group.position.x = w > 900 ? 3.2 : 0;
-      group.position.y = w > 900 ? 0 : 1.4;
+      group.position.x = compactGlobe ? 0 : (w > 900 ? 3.2 : 0);
+      group.position.y = compactGlobe ? 0 : (w > 900 ? 0 : 1.4);
     }
     resize();
     window.addEventListener("resize", resize);
@@ -503,6 +506,49 @@
       var c = k.cloneNode(true);
       c.setAttribute("aria-hidden", "true");
       track.appendChild(c);
+    });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 13b. About hero — UAE map float
+   * ------------------------------------------------------------------ */
+  var aboutFloatDone = false;
+  function initAboutFloat() {
+    if (aboutFloatDone || prefersReduced || !window.gsap) return;
+    var orbit = doc.querySelector(".about-orbit");
+    if (!orbit) return;
+    aboutFloatDone = true;
+    var gsap = window.gsap;
+    var skyline = orbit.querySelector(".about-skyline");
+    if (skyline) {
+      gsap.to(skyline, { y: -10, x: 6, scale: 1.012, rotation: 0.22, transformOrigin: "68% 52%", duration: 7.2, ease: "sine.inOut", repeat: -1, yoyo: true });
+    }
+    orbit.querySelectorAll(".about-service-card").forEach(function (el, i) {
+      gsap.to(el, { y: i % 2 ? 11 : -9, x: i % 2 ? -5 : 5, rotation: i % 2 ? -0.45 : 0.45, duration: 4.8 + i * 0.42, delay: i * 0.18, ease: "sine.inOut", repeat: -1, yoyo: true });
+    });
+    gsap.to(orbit.querySelectorAll(".about-route path"), { strokeDashoffset: -42, duration: 6, ease: "none", repeat: -1 });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 13c. Home hero — gateway micro-parallax
+   * ------------------------------------------------------------------ */
+  var gatewayMotionDone = false;
+  function initGatewayMotion() {
+    if (gatewayMotionDone || prefersReduced || isTouch) return;
+    var stage = doc.querySelector(".gateway-stage");
+    var hero = doc.querySelector(".hero");
+    if (!stage || !hero) return;
+    gatewayMotionDone = true;
+    hero.addEventListener("mousemove", function (e) {
+      var box = hero.getBoundingClientRect();
+      var x = ((e.clientX - box.left) / box.width - 0.5);
+      var y = ((e.clientY - box.top) / box.height - 0.5);
+      stage.style.setProperty("--gateway-ry", (x * 4).toFixed(2) + "deg");
+      stage.style.setProperty("--gateway-rx", (y * -3).toFixed(2) + "deg");
+    });
+    hero.addEventListener("mouseleave", function () {
+      stage.style.setProperty("--gateway-ry", "0deg");
+      stage.style.setProperty("--gateway-rx", "0deg");
     });
   }
 
@@ -551,6 +597,8 @@
     if (booted) return; booted = true;
     wrapBrandWord();
     initTstMarquee();
+    initAboutFloat();
+    initGatewayMotion();
     initReveals();
     initPointer();
   }
@@ -572,5 +620,7 @@
     if (!lenis) initLenis();
     initParallax();
     initHero3D();
+    initAboutFloat();
+    initGatewayMotion();
   });
 })();

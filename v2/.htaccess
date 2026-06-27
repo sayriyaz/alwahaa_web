@@ -2,7 +2,16 @@ Options -Indexes
 DirectoryIndex index.html
 
 RewriteEngine On
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^resources/index\.html$ /resources [R=301,L]
+RewriteRule ^tools/index\.html$ /tools [R=301,L]
 RewriteRule ^about/?$ about.html [L]
+RewriteRule ^services\.html$ /services [R=301,L]
+RewriteRule ^services/?$ services.html [L]
+RewriteRule ^resources/?$ resources/index.html [L]
+RewriteRule ^resources/(det|gdrfa|icp|mofa|mohre|indian-passport-renewal)/?$ resources/$1.html [L]
+RewriteRule ^tools/?$ tools/index.html [L]
+RewriteRule ^tools/(corporate-tax-calculator|public-holidays-uae)/?$ tools/$1.html [L]
 RewriteRule ^blog/?$ blog.html [L]
 RewriteRule ^contact/?$ contact.php [L]
 RewriteRule ^blog/mainland-company-dubai/?$ mainland-company-dubai.html [L,QSA]

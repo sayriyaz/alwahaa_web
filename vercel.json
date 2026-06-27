@@ -2,6 +2,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/services", "destination": "/#services", "permanent": true },
+    { "source": "/services.html", "destination": "/#services", "permanent": true },
+    { "source": "/resources/index.html", "destination": "/resources", "permanent": true },
+    { "source": "/tools/index.html", "destination": "/tools", "permanent": true },
     { "source": "/contact.php", "destination": "/contact", "permanent": false },
     { "source": "/v2/contact.php", "destination": "/contact", "permanent": false }
   ],

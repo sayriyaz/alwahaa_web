@@ -1,0 +1,252 @@
+{
+  "lastReviewed": "2026-06",
+  "authorities": [
+    {
+      "slug": "icp",
+      "name": "Federal Authority for Identity, Citizenship, Customs & Port Security",
+      "abbr": "ICP",
+      "flag": "🇦🇪",
+      "category": "Identity & Immigration",
+      "tagline": "Emirates ID, federal residency, Golden Visa, entry permits and citizenship.",
+      "whatIs": [
+        "ICP — the Federal Authority for Identity, Citizenship, Customs and Port Security — is the UAE federal body that manages national identity and immigration records. It issues the Emirates ID, runs the population register, and handles residency, entry permits, Golden Visa and citizenship matters at federal level.",
+        "In Dubai, day-to-day residency visas are handled by GDRFA, while ICP manages Emirates ID nationwide and residency in several other emirates. Most residents deal with ICP whenever an Emirates ID is issued, renewed or replaced."
+      ],
+      "services": [
+        "Emirates ID issuance, renewal and replacement",
+        "Residence visa processing (federal emirates)",
+        "Golden Visa applications",
+        "Entry permits and visa status changes",
+        "UAE citizenship and federal passport services",
+        "Population register and identity records"
+      ],
+      "whenNeeded": [
+        "You are issued a new residence visa and need an Emirates ID.",
+        "Your Emirates ID is expiring and must be renewed (usually within 30 days of expiry).",
+        "You are applying for a Golden Visa or long-term residency.",
+        "You need an entry permit or to change your visa status from inside the country.",
+        "You have lost or damaged your Emirates ID and need a replacement."
+      ],
+      "faqs": [
+        { "q": "How long does an Emirates ID take?", "a": "After your biometrics (fingerprints) are captured, the Emirates ID is typically printed within a few working days to about two weeks, depending on the application type and any approvals required. Urgent (fast-track) services can be faster." },
+        { "q": "How do I check my Emirates ID or application status?", "a": "You can track the status on the ICP website or the ICP UAE smart app using your application (PRAN) number or Emirates ID number. Typing centres can also check on your behalf." },
+        { "q": "How do I renew my Emirates ID?", "a": "Renew within 30 days of expiry through the ICP app or website, or at an approved typing centre. You will usually need a valid residence visa, passport copy and the renewal fee; new biometrics may be requested." }
+      ],
+      "officialUrl": "https://icp.gov.ae",
+      "relatedServices": [
+        { "label": "Emirates ID assistance", "href": "/services" },
+        { "label": "Golden Visa support", "href": "../blog/uae-golden-visa" },
+        { "label": "Visa & immigration services", "href": "/services" }
+      ],
+      "keywords": ["icp", "emirates id", "golden visa", "entry permit", "residency", "citizenship", "identity", "federal authority"]
+    },
+    {
+      "slug": "mohre",
+      "name": "Ministry of Human Resources & Emiratisation",
+      "abbr": "MOHRE",
+      "flag": "🇦🇪",
+      "category": "Employment & Labour",
+      "tagline": "Work permits, labour contracts, WPS and workplace dispute support.",
+      "whatIs": [
+        "MOHRE — the Ministry of Human Resources and Emiratisation — is the UAE federal authority that regulates the private-sector labour market. It governs work permits, labour contracts, the Wages Protection System (WPS), workplace disputes and Emiratisation targets.",
+        "Almost every private-sector company in the UAE deals with MOHRE when hiring staff, issuing or renewing work permits, registering labour contracts and ensuring salaries are paid through WPS."
+      ],
+      "services": [
+        "Work permits (new, renewal, cancellation)",
+        "Labour contracts and offer letters",
+        "Wages Protection System (WPS) registration",
+        "Labour complaints and dispute resolution",
+        "Salary and wage protection compliance",
+        "Emiratisation and quota services"
+      ],
+      "whenNeeded": [
+        "You are hiring an employee and need a work permit and labour contract.",
+        "An employee's work permit or labour card is up for renewal.",
+        "Your company must register salaries through the Wages Protection System (WPS).",
+        "You need to file or respond to a labour complaint or dispute.",
+        "You are checking Emiratisation requirements or quotas for your company."
+      ],
+      "faqs": [
+        { "q": "What is WPS?", "a": "The Wages Protection System is an electronic salary-transfer system that lets MOHRE confirm employees are paid correctly and on time through approved banks and exchange houses. Most private-sector companies must pay salaries via WPS." },
+        { "q": "How do I file a labour complaint?", "a": "You can register a labour complaint with MOHRE through their app, website, call centre or an approved service centre. MOHRE reviews the case and may refer unresolved disputes to the labour court." },
+        { "q": "How do I check a work permit or labour contract status?", "a": "Work permit and labour contract status can be checked on the MOHRE app or website using the transaction or person details, or through a Tasheel service centre." }
+      ],
+      "officialUrl": "https://www.mohre.gov.ae",
+      "relatedServices": [
+        { "label": "Corporate PRO services", "href": "../blog/pro-services-dubai" },
+        { "label": "Work permit & labour support", "href": "/services" },
+        { "label": "WPS & compliance help", "href": "/services" }
+      ],
+      "keywords": ["mohre", "work permit", "labour contract", "wps", "wages protection", "labour complaint", "emiratisation", "tasheel"]
+    },
+    {
+      "slug": "gdrfa",
+      "name": "General Directorate of Residency & Foreigners Affairs — Dubai",
+      "abbr": "GDRFA",
+      "flag": "🇦🇪",
+      "category": "Identity & Immigration",
+      "tagline": "Dubai residence visas, visit visas, Golden Visa and entry permits.",
+      "whatIs": [
+        "GDRFA Dubai — the General Directorate of Residency and Foreigners Affairs — manages residency permits, visas, Golden Visa services, entry permits and immigration matters specifically within the Emirate of Dubai.",
+        "While ICP handles federal identity and residency in several emirates, residence-visa processing for Dubai is done through GDRFA Dubai. Most Dubai residents deal with GDRFA when a visa is issued, renewed, sponsored or cancelled."
+      ],
+      "services": [
+        "Residence visas (new, renewal, cancellation)",
+        "Visit and tourist visas",
+        "Golden Visa services",
+        "Entry permits and visa status",
+        "Family sponsorship",
+        "Smart Gate registration"
+      ],
+      "whenNeeded": [
+        "You are applying for or renewing a Dubai residence visa.",
+        "You are sponsoring family members on a Dubai visa.",
+        "You need to cancel a residence visa in Dubai.",
+        "You are applying for a visit or tourist visa.",
+        "You want to register for Smart Gate for faster airport passage."
+      ],
+      "faqs": [
+        { "q": "How do I check my visa status in Dubai?", "a": "You can check Dubai residence and visit visa status on the GDRFA Dubai website or app using your file number or passport details. Typing centres and Amer service centres can also check for you." },
+        { "q": "ICP or GDRFA — which one do I use for a Dubai visa?", "a": "For residence visas processed in Dubai, GDRFA Dubai is the authority. ICP issues the Emirates ID and handles federal services and residency in several other emirates. Many Dubai applications touch both." },
+        { "q": "What is Smart Gate?", "a": "Smart Gate is an automated passport-control system at Dubai airports that lets registered residents and eligible travellers pass immigration quickly using their Emirates ID or passport." }
+      ],
+      "officialUrl": "https://gdrfad.gov.ae",
+      "relatedServices": [
+        { "label": "Visa & immigration services", "href": "/services" },
+        { "label": "Family visa support", "href": "/services" },
+        { "label": "Golden Visa guide", "href": "../blog/uae-golden-visa" }
+      ],
+      "keywords": ["gdrfa", "dubai residency", "residence visa", "visit visa", "golden visa", "smart gate", "immigration dubai", "visa cancellation", "family sponsorship"]
+    },
+    {
+      "slug": "det",
+      "name": "Dubai Department of Economy & Tourism",
+      "abbr": "DET",
+      "flag": "🇦🇪",
+      "category": "Business & Licensing",
+      "tagline": "Dubai mainland trade licences, trade names and commercial registration.",
+      "whatIs": [
+        "DET — the Dubai Department of Economy and Tourism (formerly the DED) — issues mainland trade licences, approves business activities, reserves trade names and manages commercial registration in Dubai.",
+        "Any mainland company in Dubai deals with DET to start, renew or amend its trade licence and to add or change business activities."
+      ],
+      "services": [
+        "Trade licence issuance",
+        "Trade name reservation",
+        "Initial approval",
+        "Business activity search",
+        "Licence renewal and amendment"
+      ],
+      "whenNeeded": [
+        "You are starting a mainland company in Dubai.",
+        "You need to reserve a trade name or get initial approval.",
+        "Your trade licence is due for renewal.",
+        "You want to add activities or amend your licence.",
+        "You are checking which activities your business needs."
+      ],
+      "faqs": [
+        { "q": "How do I get a Dubai mainland trade licence?", "a": "Mainland licensing through DET typically involves choosing your activity, reserving a trade name, obtaining initial approval, completing documentation and Ejari, then collecting the licence. Steps vary by activity and legal form." },
+        { "q": "What is the difference between DED and DET?", "a": "DET is the current name for what many still call the DED (Department of Economic Development). It is the same Dubai authority for economic licensing, now under the Department of Economy and Tourism." },
+        { "q": "How do I renew a DET trade licence?", "a": "A mainland licence is renewed through DET, usually requiring a valid Ejari tenancy and settlement of any fees. Alwahaa can prepare and submit the renewal on your behalf." }
+      ],
+      "officialUrl": "https://www.det.gov.ae",
+      "relatedServices": [
+        { "label": "Business setup & consultancy", "href": "/services" },
+        { "label": "Mainland company guide", "href": "../blog/mainland-company-dubai" },
+        { "label": "Free zone vs mainland", "href": "../blog/free-zone-vs-mainland-dubai" }
+      ],
+      "keywords": ["det", "ded", "dubai economy", "trade licence", "trade name", "mainland", "business activity", "commercial registration", "licence renewal", "initial approval"]
+    },
+    {
+      "slug": "mofa",
+      "name": "Ministry of Foreign Affairs",
+      "abbr": "MOFA",
+      "flag": "🇦🇪",
+      "category": "Legal & Attestation",
+      "tagline": "Document attestation and international authentication.",
+      "whatIs": [
+        "MOFA — the UAE Ministry of Foreign Affairs — handles attestation of documents for use inside the UAE and abroad, along with diplomatic services and international document authentication.",
+        "Certificates, degrees and commercial documents usually need MOFA attestation to be legally recognised in the UAE, often alongside embassy or consulate steps."
+      ],
+      "services": [
+        "Certificate attestation",
+        "Marriage certificate attestation",
+        "Degree and educational attestation",
+        "Commercial document attestation"
+      ],
+      "whenNeeded": [
+        "You need a foreign degree or certificate recognised in the UAE.",
+        "You are attesting a marriage or birth certificate.",
+        "A commercial document must be authenticated for use abroad.",
+        "An employer, university or authority asks for an attested document."
+      ],
+      "faqs": [
+        { "q": "How do I attest a certificate in the UAE?", "a": "Attestation usually follows a chain: issuing-country authorities and UAE embassy abroad, then MOFA attestation inside the UAE (with legal translation if required). The exact steps depend on the document and country of origin." },
+        { "q": "How long does MOFA attestation take?", "a": "MOFA attestation itself is often quick once prior steps are complete, but the full chain (origin country, embassy, translation) can take longer. Alwahaa can manage the whole process for you." },
+        { "q": "Do I also need embassy attestation?", "a": "Foreign-issued documents typically need attestation in the country of origin and by the UAE embassy there, before MOFA attestation in the UAE. Locally issued documents may need fewer steps." }
+      ],
+      "officialUrl": "https://www.mofa.gov.ae",
+      "relatedServices": [
+        { "label": "Attestation services", "href": "../blog/document-attestation-uae" },
+        { "label": "Legal translation", "href": "/services" },
+        { "label": "Notary & court documents", "href": "/services" }
+      ],
+      "keywords": ["mofa", "attestation", "certificate attestation", "degree attestation", "marriage certificate", "document authentication", "embassy attestation", "legalisation"]
+    },
+    {
+      "slug": "indian-passport-renewal",
+      "name": "Passport Renewal (Indian Citizens)",
+      "abbr": "Indian Embassy Services",
+      "flag": "🇮🇳",
+      "category": "Embassy & Consular",
+      "tagline": "Passport renewal, PCC, visa, attestation and consular support for Indian citizens in the UAE.",
+      "metaTitle": "Passport Renewal (Indian Citizens) | Indian Embassy Services UAE",
+      "metaDescription": "Indian passport renewal in the UAE, including PCC, visa and attestation guidance, with the June 2026 BLS to Al Hind provider transition explained for Alwahaa clients.",
+      "labels": {
+        "breadcrumb": "Passport Renewal (Indian Citizens)",
+        "card": "Passport Renewal (Indian Citizens)",
+        "footer": "Indian Passport Renewal",
+        "h1": "Passport Renewal (Indian Citizens) — Indian Embassy Services",
+        "whatHeading": "Passport Renewal for Indian citizens in the UAE",
+        "whenHeading": "When do you need Indian passport renewal support?",
+        "officialLink": "Visit the official Embassy of India UAE website",
+        "noteAuthority": "the Embassy of India, Consulate General of India and appointed official service provider",
+        "provider": "Embassy of India in Abu Dhabi",
+        "schemaAlternate": "Indian Embassy Services UAE",
+        "ctaHeading": "Need help preparing your Indian passport renewal?",
+        "ctaLead": "Alwahaa can help prepare your documents, explain the checklist and guide the booking steps while the official appointment and final decision remain with the Embassy, Consulate and appointed provider."
+      },
+      "whatIs": [
+        "Indian Embassy and Consulate services in the UAE support Indian citizens and applicants with passport renewal or reissue, Police Clearance Certificate (PCC), visa, attestation and other consular services.",
+        "Important update: until the end of June 2026, outsourced Indian passport services in the UAE are handled by the existing provider network, including BLS International. From 1 July 2026, the Government of India is transitioning outsourced passport, visa and attestation services across the UAE to Al Hind Tours & Travel LLC.",
+        "Because this is a transition period, the current official provider may depend on the appointment date and service type. Always confirm the latest booking channel with the Embassy of India, Consulate General of India or the official outsourced service provider before visiting."
+      ],
+      "services": [
+        "Indian passport renewal and reissue",
+        "Police Clearance Certificate (PCC)",
+        "Indian visa services",
+        "Document attestation and consular services",
+        "Appointment booking guidance through the official provider",
+        "Emergency consular assistance guidance"
+      ],
+      "whenNeeded": [
+        "Your Indian passport is expiring, expired, damaged or has no blank pages.",
+        "You need a passport reissue for name, address, spouse or personal-detail changes.",
+        "You need a PCC for immigration, employment or residency requirements.",
+        "You require embassy or consular attestation for Indian documents.",
+        "You are booking during the June-July 2026 provider transition and need the correct official channel."
+      ],
+      "faqs": [
+        { "q": "Where do Indian citizens renew passports in the UAE?", "a": "Indian passport renewal in the UAE is handled through the official outsourced service provider appointed by the Government of India. Until the end of June 2026, services are handled by the existing provider network, including BLS International. From 1 July 2026, Al Hind Tours & Travel LLC is scheduled to take over outsourced passport, visa and attestation services across the UAE. Check the official provider before booking." },
+        { "q": "Is there a pause during the provider transition?", "a": "Reports based on the Embassy announcement say passport, visa and attestation services are paused from 26 June to 30 June 2026 for the transition, while emergency services continue. For urgent cases, contact the Embassy or Consulate through official channels." },
+        { "q": "Can Alwahaa complete the process for me?", "a": "Alwahaa can help you prepare documents, understand the checklist, coordinate booking guidance and support related attestation or administrative paperwork. The official application, appointment and final decision remain with the Indian Embassy, Consulate and appointed service provider." }
+      ],
+      "officialUrl": "https://www.indembassyuae.gov.in/",
+      "relatedServices": [
+        { "label": "Document attestation support", "href": "../blog/document-attestation-uae" },
+        { "label": "Visa & immigration services", "href": "/services" },
+        { "label": "Ask the Alwahaa desk", "href": "../contact.php" }
+      ],
+      "keywords": ["indian embassy", "india embassy uae", "indian passport renewal", "passport reissue", "pcc", "police clearance certificate", "bls international", "al hind", "indian consulate dubai", "visa", "attestation", "consular services"]
+    }
+  ]
+}

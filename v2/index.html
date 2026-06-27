@@ -37,7 +37,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="preload" as="image" href="./assets/img/logo.webp" />
-  <link rel="stylesheet" href="./assets/css/main.css?v=20260611h" />
+  <link rel="preload" as="image" href="./assets/img/home-gateway-light.png" media="(prefers-color-scheme: light)" />
+  <link rel="preload" as="image" href="./assets/img/home-gateway-dark.png" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" href="./assets/css/main.css?v=20260627e" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -189,17 +191,16 @@
   <!-- Header -->
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#home" aria-label="Alwahaa Documents Clearing home" data-cursor>
+      <a class="brand" href="/" aria-label="Alwahaa Documents Clearing home" data-cursor>
         <img src="./assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" />
         <span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span>
       </a>
       <div class="nav__links">
-        <a href="./about.html" data-cursor>About Us</a>
+        <a href="/about" data-cursor>About Us</a>
         <a href="#services" data-cursor>Services</a>
-        <a href="#process" data-cursor>Process</a>
-        <a href="#faq" data-cursor>FAQ</a>
-        <a href="./blog.html" data-cursor>Newsroom</a>
-        <a href="./contact.php" data-cursor>Contact</a>
+        <a href="/resources" data-cursor>Resources</a>
+        <a href="/blog" data-cursor>Newsroom</a>
+        <a href="/contact" data-cursor>Contact</a>
       </div>
       <div class="nav__right">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" data-cursor>
@@ -215,18 +216,16 @@
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="./about.html"><span>01</span>About Us</a>
+    <a href="/about"><span>01</span>About Us</a>
     <a href="#services"><span>02</span>Services</a>
-    <a href="#process"><span>03</span>Process</a>
-    <a href="#faq"><span>04</span>FAQ</a>
-    <a href="./blog.html"><span>05</span>Newsroom</a>
-    <a href="./contact.php"><span>06</span>Contact</a>
+    <a href="/resources"><span>03</span>Resources</a>
+    <a href="/blog"><span>04</span>Newsroom</a>
+    <a href="/contact"><span>05</span>Contact</a>
   </div>
 
   <main>
     <!-- ============================ HERO ============================ -->
     <section id="home" class="hero">
-      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
       <div class="hero__grid" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__copy">
@@ -244,12 +243,55 @@
               Explore services
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a class="btn btn--gold btn--lg" href="./contact.php" data-magnetic data-cursor>Start a case</a>
+            <a class="btn btn--gold btn--lg" href="/contact" data-magnetic data-cursor>Start a case</a>
           </div>
           <div class="hero__badges">
             <div class="hero-chip" data-reveal><strong data-count="40" data-suffix="+">40+</strong><span>years in Dubai</span></div>
             <div class="hero-chip" data-reveal><strong data-count="1000" data-suffix="+">1000+</strong><span>companies set up</span></div>
             <div class="hero-chip" data-reveal><strong data-count="50" data-suffix="+">50+</strong><span>nationalities served</span></div>
+          </div>
+        </div>
+        <div class="hero-gateway" data-reveal aria-label="Documents transformed into UAE business approvals">
+          <div class="gateway-stage">
+            <div class="gateway-light" aria-hidden="true"></div>
+            <div class="gateway-art" aria-hidden="true"></div>
+            <div class="gateway-docs" aria-hidden="true">
+              <span class="gateway-doc gateway-doc--one"><b>Trade name</b><small>Prepared</small></span>
+              <span class="gateway-doc gateway-doc--two"><b>Visa file</b><small>Checked</small></span>
+              <span class="gateway-doc gateway-doc--three"><b>Attestation</b><small>Ready</small></span>
+            </div>
+            <svg class="gateway-paths" viewBox="0 0 760 520" fill="none" aria-hidden="true">
+              <path class="gateway-path gateway-path--a" d="M80 286 C210 178 292 180 390 250 C465 304 548 280 672 178" />
+              <path class="gateway-path gateway-path--b" d="M98 342 C220 260 320 282 412 328 C512 376 590 322 704 246" />
+              <path class="gateway-path gateway-path--c" d="M118 218 C250 116 390 126 500 186 C580 230 632 188 704 120" />
+            </svg>
+            <div class="gateway-arch" aria-hidden="true">
+              <span class="gateway-arch__halo"></span>
+              <span class="gateway-arch__frame"></span>
+              <span class="gateway-arch__door"></span>
+              <span class="gateway-seal">AE</span>
+              <span class="gateway-skyline gateway-skyline--one"></span>
+              <span class="gateway-skyline gateway-skyline--two"></span>
+              <span class="gateway-skyline gateway-skyline--three"></span>
+              <span class="gateway-skyline gateway-skyline--four"></span>
+              <span class="gateway-skyline gateway-skyline--five"></span>
+            </div>
+            <div class="gateway-chip gateway-chip--licence">
+              <b>Licence</b><span>Business setup</span>
+            </div>
+            <div class="gateway-chip gateway-chip--visa">
+              <b>Residency</b><span>Visas &amp; Emirates ID</span>
+            </div>
+            <div class="gateway-chip gateway-chip--pro">
+              <b>PRO</b><span>Authority follow-up</span>
+            </div>
+            <div class="gateway-chip gateway-chip--bank">
+              <b>Banking</b><span>Tax &amp; compliance</span>
+            </div>
+            <div class="gateway-status">
+              <span></span>
+              <div><b>One trusted desk</b><small>From document check to approval</small></div>
+            </div>
           </div>
         </div>
       </div>
@@ -261,8 +303,8 @@
       <p class="eyebrow">A single counter, every department</p>
       <div class="marquee" style="--mq-dur: 42s">
         <div class="marquee__track">
-          <span>DED</span><span>GDRFA</span><span>MOHRE</span><span>MOFA</span><span>ICP</span><span>Amer</span><span>Tasheel</span><span>Ejari</span><span>Municipality</span><span>Chamber of Commerce</span><span>RTA</span><span>Civil Defence</span>
-          <span>DED</span><span>GDRFA</span><span>MOHRE</span><span>MOFA</span><span>ICP</span><span>Amer</span><span>Tasheel</span><span>Ejari</span><span>Municipality</span><span>Chamber of Commerce</span><span>RTA</span><span>Civil Defence</span>
+          <span class="authority-logo"><img src="./assets/img/dept_logo/mohre-en.png" alt="MOHRE" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/icp.png" alt="ICP" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/gdrfa.png" alt="GDRFA" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/ded-det.png" alt="DET" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/mofa-logo.jpg" alt="MOFA" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/dubai-court.png" alt="Dubai Courts" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/amer.png" alt="Amer" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/tasheel.png.webp" alt="Tasheel" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/rta.png" alt="RTA" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/Ejari-Logo.png" alt="Ejari" loading="lazy" /></span>
+          <span class="authority-logo"><img src="./assets/img/dept_logo/mohre-en.png" alt="MOHRE" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/icp.png" alt="ICP" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/gdrfa.png" alt="GDRFA" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/ded-det.png" alt="DET" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/mofa-logo.jpg" alt="MOFA" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/dubai-court.png" alt="Dubai Courts" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/amer.png" alt="Amer" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/tasheel.png.webp" alt="Tasheel" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/rta.png" alt="RTA" loading="lazy" /></span><span class="authority-logo"><img src="./assets/img/dept_logo/Ejari-Logo.png" alt="Ejari" loading="lazy" /></span>
         </div>
       </div>
     </section>
@@ -506,7 +548,7 @@
           <p class="eyebrow">Questions</p>
           <h2>Good to know before you begin.</h2>
           <p class="lead">A few of the things clients ask most. Have a specific case? The desk will walk you through it.</p>
-          <a class="btn btn--gold" href="./contact.php" data-magnetic data-cursor style="margin-top:1rem">Ask the desk</a>
+          <a class="btn btn--gold" href="/contact" data-magnetic data-cursor style="margin-top:1rem">Ask the desk</a>
         </div>
         <div class="faq__list" data-stagger>
           <div class="faq-item">
@@ -545,7 +587,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.2-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
             </a>
             <a class="btn btn--ghost btn--lg" href="tel:+97142552895" data-magnetic data-cursor>Call +971 4 255 2895</a>
-            <a class="btn btn--ghost btn--lg" href="./contact.php" data-magnetic data-cursor>Send a message</a>
+            <a class="btn btn--ghost btn--lg" href="/contact" data-magnetic data-cursor>Send a message</a>
           </div>
         </div>
 
@@ -591,7 +633,7 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <a class="brand" href="#home"><img src="./assets/img/logo.webp" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+          <a class="brand" href="/"><img src="./assets/img/logo.webp" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
           <p>Dubai business setup, visa, attestation and PRO services — handled end to end with calm precision since 1983.</p>
         </div>
         <div class="footer__col">
@@ -606,9 +648,8 @@
           <h4>Company</h4>
           <a href="#story">About</a>
           <a href="#why">Why Us</a>
-          <a href="#process">Process</a>
-          <a href="#faq">FAQ</a>
-          <a href="./contact.php">Contact</a>
+          <a href="/resources" data-cursor>Resources</a>
+          <a href="/contact">Contact</a>
         </div>
         <div class="footer__col">
           <h4>Get in touch</h4>
@@ -633,9 +674,8 @@
   <!-- Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <!-- App -->
-  <script src="./assets/js/main.js?v=20260611b" defer></script>
+  <script src="./assets/js/main.js?v=20260627a" defer></script>
 </body>
 </html>

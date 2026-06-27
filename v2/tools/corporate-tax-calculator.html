@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#06080c" media="(prefers-color-scheme: dark)" />
+  <title>UAE Corporate Tax Calculator 2026 | Alwahaa Tools</title>
+  <meta name="description" content="Free UAE corporate tax calculator. Estimate your 9% corporate tax (0% up to AED 375,000), check Small Business Relief and free zone notes — by Alwahaa Documents Clearing, Dubai." />
+  <meta name="keywords" content="UAE corporate tax calculator, corporate tax UAE 9%, AED 375000 threshold, Small Business Relief, free zone corporate tax, Dubai tax" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://www.alwahaagroup.com/tools/corporate-tax-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Alwahaa Documents Clearing" />
+  <meta property="og:title" content="UAE Corporate Tax Calculator 2026" />
+  <meta property="og:description" content="Estimate your UAE corporate tax in seconds — 9% above AED 375,000, with Small Business Relief and free zone notes." />
+  <meta property="og:url" content="https://www.alwahaagroup.com/tools/corporate-tax-calculator" />
+  <meta property="og:image" content="https://www.alwahaagroup.com/assets/img/services/svc-tax.webp" />
+  <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="../assets/css/main.css?v=20260627e" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"UAE Corporate Tax Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},"url":"https://www.alwahaagroup.com/tools/corporate-tax-calculator","provider":{"@type":"Organization","@id":"https://www.alwahaagroup.com/#business","name":"Alwahaa Documents Clearing"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the UAE corporate tax rate?","acceptedAnswer":{"@type":"Answer","text":"UAE corporate tax is 0% on taxable income up to AED 375,000 and 9% on the portion above AED 375,000, for financial years starting on or after 1 June 2023."}},{"@type":"Question","name":"What is Small Business Relief?","acceptedAnswer":{"@type":"Answer","text":"Businesses with revenue of AED 3 million or less in the relevant and previous tax periods may elect Small Business Relief and be treated as having no taxable income, available through the tax period ending 31 December 2026."}},{"@type":"Question","name":"Do free zone companies pay corporate tax?","acceptedAnswer":{"@type":"Answer","text":"A Qualifying Free Zone Person can benefit from a 0% rate on qualifying income and 9% on non-qualifying income, subject to meeting the conditions."}}]}</script>
+  <script>
+    (function () {
+      document.documentElement.classList.remove('no-js');
+      try { var t = localStorage.getItem('aw-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    })();
+  </script>
+  <style>
+    .tool { max-width: 820px; margin-inline: auto; }
+    .tool__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.2rem, 3vw, 2rem); margin-top: 2rem; align-items: start; }
+    @media (max-width: 760px) { .tool__grid { grid-template-columns: 1fr; } }
+    .tool-card { padding: clamp(1.4rem, 3vw, 2rem); border-radius: var(--r-xl); background: radial-gradient(120% 130% at 0% 0%, rgba(176,141,58,0.10), transparent 55%), var(--bg-elevated); border: 1px solid var(--line); box-shadow: var(--shadow-lg); }
+    .tool-field { display: grid; gap: 0.5rem; margin-bottom: 1.3rem; }
+    .tool-field label { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; }
+    .tool-input { display: flex; align-items: center; gap: 0.6rem; padding: 0.95rem 1.05rem; border-radius: var(--r-md); background: var(--surface-solid); border: 1px solid var(--line-strong); transition: border-color 0.3s, box-shadow 0.3s; }
+    [data-theme="dark"] .tool-input { background: var(--bg-tint); }
+    .tool-input:focus-within { border-color: var(--gold-soft); box-shadow: 0 0 0 4px rgba(176,141,58,0.12); }
+    .tool-input .cur { color: var(--ink-mute); font-weight: 600; font-size: 0.95rem; }
+    .tool-input input { width: 100%; border: none; outline: none; background: none; font: inherit; color: var(--ink); font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+    .tool-check { display: flex; gap: 0.7rem; align-items: flex-start; padding: 1rem 1.1rem; border-radius: var(--r-md); border: 1px solid var(--line); background: var(--bg-tint); cursor: pointer; }
+    .tool-check input { margin-top: 0.2rem; width: 18px; height: 18px; accent-color: var(--gold); }
+    .tool-check span { font-size: 0.9rem; color: var(--ink-soft); }
+    .result__big { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: -0.03em; line-height: 1; color: var(--ink); }
+    .result__big .cur { font-size: 0.45em; color: var(--ink-mute); margin-right: 0.2em; }
+    .result__sub { color: var(--ink-mute); font-size: 0.9rem; margin-top: 0.5rem; }
+    .result__rows { display: grid; gap: 0.7rem; margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+    .result__row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 0.95rem; }
+    .result__row span:first-child { color: var(--ink-soft); }
+    .result__row b { font-variant-numeric: tabular-nums; }
+    .result__badge { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.2rem; padding: 0.45rem 0.9rem; border-radius: var(--r-pill); font-size: 0.82rem; font-weight: 600; background: linear-gradient(135deg, rgba(176,141,58,0.14), transparent); border: 1px solid var(--gold-soft); color: var(--gold); }
+    .tool-notes { margin-top: 1.6rem; display: grid; gap: 0.6rem; }
+    .tool-notes li { font-size: 0.88rem; color: var(--ink-soft); padding-left: 1.2rem; position: relative; }
+    .tool-notes li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-soft); }
+    .tool-disclaimer { margin-top: 1.8rem; font-size: 0.8rem; color: var(--ink-mute); line-height: 1.6; padding: 1rem 1.2rem; border: 1px dashed var(--line-strong); border-radius: var(--r-md); }
+  </style>
+</head>
+<body class="no-js">
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__inner"><img class="preloader__logo" src="../assets/img/logo.webp" alt="" width="64" height="74" /><div class="preloader__bar"><i id="pl-bar"></i></div><div class="preloader__num"><span id="pl-num">0</span>%</div></div></div>
+  <div class="atmosphere" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Alwahaa Documents Clearing home"><img src="../assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+      <div class="nav__links">
+        <a href="/about">About Us</a><a href="/services">Services</a><a href="/resources">Resources</a><a href="/blog">Newsroom</a><a href="/contact">Contact</a>
+      </div>
+      <div class="nav__right">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+  <div class="mobile-nav" id="mobileNav"><a href="/about"><span>01</span>About Us</a><a href="/services"><span>02</span>Services</a><a href="/resources"><span>03</span>Resources</a><a href="/blog"><span>04</span>Newsroom</a><a href="/contact"><span>05</span>Contact</a></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="tool">
+          <div class="breadcrumb" data-reveal><a href="/">Home</a><span>/</span><a href="/tools">Tools</a><span>/</span>Corporate tax calculator</div>
+          <div class="sec-head" data-reveal>
+            <p class="eyebrow">Free tool</p>
+            <h1 style="font-size:clamp(2rem,4vw,3rem)">UAE Corporate Tax Calculator</h1>
+            <p class="lead">Estimate your UAE corporate tax in seconds. 0% up to AED 375,000, 9% above — with Small Business Relief and free zone notes.</p>
+          </div>
+
+          <div class="tool__grid">
+            <div class="tool-card" data-reveal="left">
+              <div class="tool-field">
+                <label for="income">Annual taxable income (net profit)</label>
+                <div class="tool-input"><span class="cur">AED</span><input type="text" id="income" inputmode="numeric" placeholder="500,000" autocomplete="off" /></div>
+              </div>
+              <label class="tool-check"><input type="checkbox" id="sbr" /><span><b>Small Business Relief</b> — my revenue is AED 3,000,000 or less and I want to elect relief (available through 31 Dec 2026).</span></label>
+            </div>
+
+            <div class="tool-card" data-reveal="right" aria-live="polite">
+              <p class="result__sub" style="margin-top:0">Estimated corporate tax</p>
+              <div class="result__big"><span class="cur">AED</span><span id="taxOut">0</span></div>
+              <div class="result__badge" id="rateBadge">Effective rate: 0%</div>
+              <div class="result__rows">
+                <div class="result__row"><span>0% band (first AED 375,000)</span><b>AED 0</b></div>
+                <div class="result__row"><span>9% on the remainder</span><b id="nineOut">AED 0</b></div>
+                <div class="result__row"><span>Taxable above threshold</span><b id="aboveOut">AED 0</b></div>
+              </div>
+              <a class="btn btn--gold" id="ctaWa" href="/contact" style="margin-top:1.6rem;width:100%">Get help registering &amp; filing
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <ul class="tool-notes" data-reveal>
+            <li><b>0%</b> on taxable income up to <b>AED 375,000</b>; <b>9%</b> on the portion above, for financial years starting on or after 1 June 2023.</li>
+            <li><b>Small Business Relief:</b> revenue ≤ AED 3M may elect to be treated as having no taxable income (through the period ending 31 Dec 2026).</li>
+            <li><b>Free zone:</b> a Qualifying Free Zone Person can get 0% on qualifying income, 9% on non-qualifying income, if conditions are met.</li>
+            <li><b>Large multinationals</b> (group revenue ≥ EUR 750M) may fall under the 15% Domestic Minimum Top-up Tax — outside this estimate.</li>
+          </ul>
+
+          <p class="tool-disclaimer" data-reveal>Indicative estimate only — not tax or legal advice. UAE corporate tax treatment depends on your specific structure, elections, exempt income and Federal Tax Authority guidance. Figures current as of June 2026. For an accurate assessment and registration/filing support, contact the Alwahaa desk.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container cta"><div class="cta__card" data-reveal="scale"><p class="eyebrow" style="justify-content:center">Corporate tax support</p><h2>Registered for corporate tax yet?</h2><p class="lead">Alwahaa helps with corporate tax registration, returns, VAT and accounting support — accurately and on time.</p><div class="cta__actions"><a class="btn btn--gold btn--lg" href="/contact">Talk to Alwahaa</a><a class="btn btn--ghost btn--lg" href="/tools">More tools</a></div></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand"><a class="brand" href="/"><img src="../assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 42 years of local experience.</p></div>
+        <div class="footer__col"><h4>Explore</h4><a href="/about">About Us</a><a href="/services">Services</a><a href="/tools">Tools</a><a href="/blog">Newsroom</a><a href="/contact">Contact</a></div>
+        <div class="footer__col"><h4>Services</h4><a href="/services">Business Setup</a><a href="/services">PRO Services</a><a href="/services">VAT &amp; Corporate Tax</a></div>
+        <div class="footer__col"><h4>Get in touch</h4><a href="tel:+97142552895">+971 4 255 2895</a><a href="https://wa.me/971502277187">WhatsApp +971 50 227 7187</a><a href="mailto:info@alwahaagroup.com">info@alwahaagroup.com</a></div>
+      </div>
+      <div class="footer__bottom"><p>© <span id="year">2026</span> Alwahaa Documents Clearing. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js?v=20260611b" defer></script>
+  <script>
+    (function () {
+      var THRESHOLD = 375000, RATE = 0.09;
+      var incomeEl = document.getElementById('income');
+      var sbrEl = document.getElementById('sbr');
+      var taxOut = document.getElementById('taxOut');
+      var nineOut = document.getElementById('nineOut');
+      var aboveOut = document.getElementById('aboveOut');
+      var rateBadge = document.getElementById('rateBadge');
+      var cta = document.getElementById('ctaWa');
+
+      function fmt(n) { return Math.round(n).toLocaleString('en-US'); }
+      function parseNum(s) { return Number(String(s).replace(/[^0-9.]/g, '')) || 0; }
+
+      function calc() {
+        var income = parseNum(incomeEl.value);
+        var sbr = sbrEl.checked;
+        var above = Math.max(0, income - THRESHOLD);
+        var tax = sbr ? 0 : above * RATE;
+        var rate = income > 0 ? (tax / income) * 100 : 0;
+
+        taxOut.textContent = fmt(tax);
+        nineOut.textContent = 'AED ' + fmt(sbr ? 0 : above * RATE);
+        aboveOut.textContent = 'AED ' + fmt(above);
+        rateBadge.textContent = sbr ? 'Small Business Relief — AED 0 tax' : 'Effective rate: ' + rate.toFixed(2) + '%';
+
+        var msg = 'Hello Alwahaa, I used your corporate tax calculator (taxable income AED ' + fmt(income) + (sbr ? ', Small Business Relief' : '') + ', estimated tax AED ' + fmt(tax) + '). I would like help with corporate tax registration and filing.';
+        cta.setAttribute('href', 'https://wa.me/971502277187?text=' + encodeURIComponent(msg));
+        cta.setAttribute('target', '_blank');
+        cta.setAttribute('rel', 'noopener');
+      }
+
+      // thousands separator as you type
+      incomeEl.addEventListener('input', function () {
+        var caret = incomeEl.value.length - incomeEl.selectionStart;
+        var n = parseNum(incomeEl.value);
+        incomeEl.value = n ? n.toLocaleString('en-US') : '';
+        try { incomeEl.selectionStart = incomeEl.selectionEnd = incomeEl.value.length - caret; } catch (e) {}
+        calc();
+      });
+      sbrEl.addEventListener('change', calc);
+      calc();
+    })();
+  </script>
+</body>
+</html>
