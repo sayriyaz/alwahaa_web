@@ -360,7 +360,7 @@
    * ------------------------------------------------------------------ */
   var parallaxDone = false;
   function initParallax() {
-    if (parallaxDone || prefersReduced || !window.gsap || !window.ScrollTrigger) return;
+    if (parallaxDone || prefersReduced || isTouch || innerWidth <= 860 || !window.gsap || !window.ScrollTrigger) return;
     parallaxDone = true;
     var gsap = window.gsap; gsap.registerPlugin(window.ScrollTrigger);
     if (doc.querySelector(".blob")) {

@@ -191,7 +191,7 @@ $schema = [
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="stylesheet" href="./assets/css/main.css?v=20260627e" />
+  <link rel="stylesheet" href="./assets/css/main.css?v=20260627n" />
   <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?></script>
   <script>
     (function () {
@@ -253,6 +253,6 @@ $schema = [
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script src="./assets/js/main.js?v=20260611b" defer></script>
+  <script src="./assets/js/main.js?v=20260627m" defer></script>
 </body>
 </html>
