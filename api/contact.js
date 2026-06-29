@@ -58,7 +58,7 @@ async function sendMessage(socket, { fromName, fromEmail, to, replyTo, subject, 
   if (!result.startsWith("250")) throw new Error("SMTP server did not accept the message");
 }
 
-async function sendMail({ name, email, phone, message }) {
+async function sendMail({ name, email, phone, message, ip, ua }) {
   const host = process.env.SMTP_HOST || "smtp.zoho.com";
   const port = Number(process.env.SMTP_PORT || 587);
   const username = process.env.SMTP_USERNAME;
@@ -112,6 +112,11 @@ async function sendMail({ name, email, phone, message }) {
       "",
       "Message:",
       message,
+      "",
+      "---",
+      `IP: ${ip || "-"}`,
+      `User-Agent: ${ua || "-"}`,
+      `Received: ${new Date().toISOString()}`,
     ].join("\r\n"),
   });
 
@@ -164,14 +169,30 @@ export default async function handler(req, res) {
   const email = String(req.body?.email || "").trim().slice(0, 320);
   const phone = String(req.body?.phone || "").trim().slice(0, 80);
   const message = String(req.body?.message || "").trim().slice(0, MAX_FIELD_LENGTH);
+  const honeypot = String(req.body?.company || "").trim();
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  // Client IP / agent — Vercel sets x-forwarded-for; first hop is the real client.
+  const ip =
+    String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() ||
+    String(req.headers["x-real-ip"] || "").trim() ||
+    req.socket?.remoteAddress ||
+    "-";
+  const ua = String(req.headers["user-agent"] || "-").slice(0, 300);
+
+  // Honeypot: real users never fill the hidden "company" field — bots do.
+  // Silently accept (fake success) so spam bots don't learn they were blocked.
+  if (honeypot) {
+    console.warn(`Spam dropped (honeypot) from ${ip}: ${ua}`);
+    return redirect(res, "sent", { name: name.slice(0, 60) });
+  }
 
   if (!name || !emailValid || !message) {
     return redirect(res, "invalid");
   }
 
   try {
-    await sendMail({ name, email, phone, message });
+    await sendMail({ name, email, phone, message, ip, ua });
     return redirect(res, "sent", { name: name.slice(0, 60) });
   } catch (error) {
     console.error("Contact form delivery failed:", error.message);

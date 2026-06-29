@@ -109,6 +109,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
     $message = trim($_POST['message'] ?? '');
+    $honeypot = trim($_POST['company'] ?? '');
+    $client_ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '-';
+    $client_ip = trim(explode(',', $client_ip)[0]);
+    $client_ua = substr($_SERVER['HTTP_USER_AGENT'] ?? '-', 0, 300);
+
+    // Honeypot: bots fill the hidden "company" field; fake a success and drop it.
+    if ($honeypot !== '') {
+        error_log("Spam dropped (honeypot) from {$client_ip}: {$client_ua}");
+        $_SESSION['contact_success'] = [
+            'name' => $name,
+            'delivery_note' => 'Your message has been sent. We will get back to you shortly.'
+        ];
+        header('Location: ' . $_SERVER['PHP_SELF'] . '?sent=1');
+        exit;
+    }
 
     if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $send_error = 'Please enter your name, a valid email address, and a message.';
@@ -120,7 +135,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             . "Name: {$name}\n"
             . "Email: {$email}\n"
             . "Phone: " . ($phone !== '' ? $phone : '-') . "\n\n"
-            . "Message:\n{$message}\n";
+            . "Message:\n{$message}\n\n"
+            . "---\n"
+            . "IP: {$client_ip}\n"
+            . "User-Agent: {$client_ua}\n";
 
         $mail_sent = smtp_send_mail($smtp_config, $name, $email, $subject, $body);
 
@@ -308,6 +326,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
               <?php endif; ?>
               <form class="cform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+                  <label for="company">Company (leave blank)</label>
+                  <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+                </div>
                 <div class="row2">
                   <div class="field">
                     <label for="name">Your name</label>

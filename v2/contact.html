@@ -123,6 +123,10 @@
           <!-- Form -->
           <div class="cform-wrap" id="form" data-reveal="left"><div id="deploymentFormStatus"></div>
                                         <form class="cform" action="/api/contact" method="POST">
+                <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+                  <label for="company">Company (leave blank)</label>
+                  <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+                </div>
                 <div class="row2">
                   <div class="field">
                     <label for="name">Your name</label>
