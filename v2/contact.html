@@ -22,7 +22,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://challenges.cloudflare.com" />
   <link rel="stylesheet" href="./assets/css/main.css?v=20260627n" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -145,6 +147,8 @@
                   <label for="message">How can we help?</label>
                   <textarea id="message" name="message" required placeholder="Tell us what you need handled…"></textarea>
                 </div>
+                <!-- Cloudflare Turnstile -->
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAADs2oSmv1Yzdp-ZJ" data-theme="auto" style="margin:0.4rem 0 1.2rem"></div>
                 <button class="btn btn--gold btn--lg submit" type="submit" data-magnetic data-cursor>
                   Send message
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>

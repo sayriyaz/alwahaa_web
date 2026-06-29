@@ -125,8 +125,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
+    // Cloudflare Turnstile — only enforced when TURNSTILE_SECRET is set.
+    $turnstile_ok = true;
+    $turnstile_secret = getenv('TURNSTILE_SECRET');
+    if ($turnstile_secret) {
+        $token = $_POST['cf-turnstile-response'] ?? '';
+        $turnstile_ok = false;
+        if ($token !== '') {
+            $verify = @file_get_contents(
+                'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+                false,
+                stream_context_create(['http' => [
+                    'method' => 'POST',
+                    'header' => 'Content-Type: application/x-www-form-urlencoded',
+                    'content' => http_build_query(['secret' => $turnstile_secret, 'response' => $token, 'remoteip' => $client_ip]),
+                    'timeout' => 10,
+                ]])
+            );
+            $turnstile_ok = $verify && (json_decode($verify, true)['success'] ?? false);
+        }
+    }
+
     if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $send_error = 'Please enter your name, a valid email address, and a message.';
+    } elseif (!$turnstile_ok) {
+        $send_error = 'Verification failed. Please try again.';
     } else {
         $smtp_config = require __DIR__ . '/../contact/smtp-config.php';
         $to = $smtp_config['to_email'];
@@ -211,7 +234,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://challenges.cloudflare.com" />
   <link rel="stylesheet" href="./assets/css/main.css?v=20260627n" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -348,6 +373,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <label for="message">How can we help?</label>
                   <textarea id="message" name="message" required placeholder="Tell us what you need handled…"></textarea>
                 </div>
+                <!-- Cloudflare Turnstile -->
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAADs2oSmv1Yzdp-ZJ" data-theme="auto" style="margin:0.4rem 0 1.2rem"></div>
                 <button class="btn btn--gold btn--lg submit" type="submit" data-magnetic data-cursor>
                   Send message
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>

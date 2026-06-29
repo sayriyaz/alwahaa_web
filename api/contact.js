@@ -3,6 +3,25 @@ import tls from "node:tls";
 
 const MAX_FIELD_LENGTH = 5000;
 
+// Verify a Cloudflare Turnstile token. Returns true when the token is valid.
+async function verifyTurnstile(secret, token, ip) {
+  if (!token) return false;
+  try {
+    const body = new URLSearchParams({ secret, response: token });
+    if (ip && ip !== "-") body.append("remoteip", ip);
+    const resp = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+    });
+    const data = await resp.json();
+    return data.success === true;
+  } catch (error) {
+    console.error("Turnstile verify failed:", error.message);
+    return false;
+  }
+}
+
 function readResponse(socket) {
   return new Promise((resolve, reject) => {
     let response = "";
@@ -189,6 +208,18 @@ export default async function handler(req, res) {
 
   if (!name || !emailValid || !message) {
     return redirect(res, "invalid");
+  }
+
+  // Cloudflare Turnstile — only enforced when the secret is configured, so the
+  // form keeps working if keys are ever missing. Set TURNSTILE_SECRET in Vercel.
+  const turnstileSecret = process.env.TURNSTILE_SECRET;
+  if (turnstileSecret) {
+    const token = String(req.body?.["cf-turnstile-response"] || "");
+    const human = await verifyTurnstile(turnstileSecret, token, ip);
+    if (!human) {
+      console.warn(`Turnstile rejected submission from ${ip}: ${ua}`);
+      return redirect(res, "invalid");
+    }
   }
 
   try {
