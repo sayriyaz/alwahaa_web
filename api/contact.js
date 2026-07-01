@@ -55,26 +55,157 @@ async function command(socket, value, expectedCode) {
   }
 }
 
+// RFC 2047 encode a subject so non-ASCII characters survive.
+function encodeSubject(subject) {
+  // eslint-disable-next-line no-control-regex
+  if (/^[\x00-\x7F]*$/.test(subject)) return subject;
+  return `=?UTF-8?B?${Buffer.from(subject, "utf8").toString("base64")}?=`;
+}
+
 // Send a single message over an already-authenticated SMTP session.
-async function sendMessage(socket, { fromName, fromEmail, to, replyTo, subject, body }) {
+// Pass `html` to send a multipart/alternative (HTML + plain-text fallback).
+async function sendMessage(socket, { fromName, fromEmail, to, replyTo, subject, text, html }) {
   await command(socket, `MAIL FROM:<${fromEmail}>`, 250);
   await command(socket, `RCPT TO:<${to}>`, 250);
   await command(socket, "DATA", 354);
-  const mail = [
+
+  const headers = [
     `From: ${fromName} <${fromEmail}>`,
     `To: ${to}`,
     ...(replyTo ? [`Reply-To: ${replyTo}`] : []),
-    `Subject: ${subject}`,
+    `Subject: ${encodeSubject(subject)}`,
     "MIME-Version: 1.0",
-    "Content-Type: text/plain; charset=UTF-8",
-    "",
-    body.replace(/^\./gm, ".."),
-    ".",
-    "",
-  ].join("\r\n");
-  socket.write(mail);
+  ];
+
+  let bodyBlock;
+  if (html) {
+    const boundary = `aw_${Date.now().toString(36)}_${Math.random().toString(36).slice(2)}`;
+    headers.push(`Content-Type: multipart/alternative; boundary="${boundary}"`);
+    bodyBlock = [
+      "",
+      `--${boundary}`,
+      "Content-Type: text/plain; charset=UTF-8",
+      "Content-Transfer-Encoding: 8bit",
+      "",
+      text || "",
+      "",
+      `--${boundary}`,
+      "Content-Type: text/html; charset=UTF-8",
+      "Content-Transfer-Encoding: 8bit",
+      "",
+      html,
+      "",
+      `--${boundary}--`,
+      "",
+    ].join("\r\n");
+  } else {
+    headers.push("Content-Type: text/plain; charset=UTF-8");
+    bodyBlock = ["", text || "", ""].join("\r\n");
+  }
+
+  const raw = (headers.join("\r\n") + "\r\n" + bodyBlock).replace(/^\./gm, "..");
+  socket.write(raw + "\r\n.\r\n");
   const result = await readResponse(socket);
   if (!result.startsWith("250")) throw new Error("SMTP server did not accept the message");
+}
+
+// --- Branded HTML email templates -------------------------------------------
+
+const BRAND = {
+  logo: "https://www.alwahaagroup.com/assets/img/logo.png",
+  gold: "#b08d3a",
+  ink: "#0a1830",
+  site: "https://www.alwahaagroup.com",
+};
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function emailShell(inner) {
+  return `<!doctype html><html><body style="margin:0;padding:0;background:#f4f4f2">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0">Alwahaa Documents Clearing</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f2;padding:28px 12px;font-family:'Segoe UI',Arial,Helvetica,sans-serif">
+    <tr><td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border:1px solid #ececec;border-radius:16px;overflow:hidden">
+        <tr><td style="padding:22px 30px;border-bottom:1px solid #f0f0ee">
+          <table role="presentation" width="100%"><tr>
+            <td style="vertical-align:middle"><img src="${BRAND.logo}" width="42" height="48" alt="Alwahaa" style="display:block;border:0"></td>
+            <td align="right" style="vertical-align:middle;font-size:15px;font-weight:700;color:${BRAND.ink};letter-spacing:.2px">Alwahaa <span style="color:${BRAND.gold}">Documents Clearing</span></td>
+          </tr></table>
+        </td></tr>
+        ${inner}
+      </table>
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%">
+        <tr><td style="padding:18px 30px;text-align:center;color:#9ca3af;font-size:11px;line-height:1.7">
+          Alwahaa Documents Clearing · Port Saeed, Deira, Dubai, UAE<br>
+          +971 4 255 2895 · <a href="mailto:info@alwahaagroup.com" style="color:#9ca3af">info@alwahaagroup.com</a> · <a href="${BRAND.site}" style="color:${BRAND.gold};text-decoration:none">www.alwahaagroup.com</a>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+  </body></html>`;
+}
+
+// Internal notification to the business inbox.
+function enquiryHtml({ name, email, phone, message, ip, ua }) {
+  const row = (label, value) =>
+    `<tr><td style="padding:11px 0;border-bottom:1px solid #eee;color:#6b7280;font-size:13px;width:96px;vertical-align:top">${label}</td>
+      <td style="padding:11px 0;border-bottom:1px solid #eee;color:#111827;font-size:14px;font-weight:600">${value}</td></tr>`;
+  return emailShell(`
+    <tr><td style="padding:30px">
+      <div style="display:inline-block;background:rgba(176,141,58,.12);color:${BRAND.gold};font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:6px 12px;border-radius:999px">New enquiry</div>
+      <h1 style="margin:14px 0 2px;font-size:21px;color:${BRAND.ink}">New website enquiry</h1>
+      <p style="margin:0 0 22px;color:#6b7280;font-size:13px">Submitted through the alwahaagroup.com contact form</p>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        ${row("Name", escapeHtml(name))}
+        ${row("Email", `<a href="mailto:${escapeHtml(email)}" style="color:${BRAND.gold};text-decoration:none">${escapeHtml(email)}</a>`)}
+        ${row("Phone", phone ? `<a href="tel:${escapeHtml(phone)}" style="color:#111827;text-decoration:none">${escapeHtml(phone)}</a>` : "—")}
+      </table>
+      <div style="margin-top:22px">
+        <div style="color:#6b7280;font-size:13px;margin-bottom:8px">Message</div>
+        <div style="background:#f7f7f5;border-left:3px solid ${BRAND.gold};padding:14px 16px;border-radius:8px;color:#111827;font-size:14px;line-height:1.6;white-space:pre-wrap">${escapeHtml(message)}</div>
+      </div>
+      <div style="margin-top:26px">
+        <a href="mailto:${escapeHtml(email)}" style="background:${BRAND.gold};color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:999px;font-size:14px;font-weight:700;display:inline-block">Reply to ${escapeHtml(name)}</a>
+      </div>
+    </td></tr>
+    <tr><td style="padding:14px 30px;background:#fafafa;border-top:1px solid #eee;color:#9ca3af;font-size:11px;line-height:1.7">
+      <strong style="color:#9ca3af">Sender details</strong><br>
+      IP: ${escapeHtml(ip || "-")} · ${new Date().toUTCString()}<br>
+      ${escapeHtml(ua || "-")}
+    </td></tr>`);
+}
+
+// Confirmation auto-reply to the client.
+function autoReplyHtml({ name, message }) {
+  return emailShell(`
+    <tr><td style="padding:30px">
+      <h1 style="margin:0 0 6px;font-size:21px;color:${BRAND.ink}">Thank you for your enquiry</h1>
+      <p style="margin:0 0 18px;color:#374151;font-size:15px;line-height:1.6">Dear ${escapeHtml(name)},</p>
+      <p style="margin:0 0 18px;color:#374151;font-size:15px;line-height:1.6">Thank you for contacting <strong>Alwahaa Documents Clearing</strong>. Your message has been received and our team will get back to you shortly — usually within one business day.</p>
+      <div style="margin:0 0 22px">
+        <div style="color:#6b7280;font-size:13px;margin-bottom:8px">Your message</div>
+        <div style="background:#f7f7f5;border-left:3px solid ${BRAND.gold};padding:14px 16px;border-radius:8px;color:#111827;font-size:14px;line-height:1.6;white-space:pre-wrap">${escapeHtml(message)}</div>
+      </div>
+      <div style="border-top:1px solid #eee;padding-top:20px">
+        <div style="color:#6b7280;font-size:13px;margin-bottom:10px">Need to reach us sooner?</div>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="font-size:14px;color:#111827">
+          <tr><td style="padding:3px 0">📞 <a href="tel:+97142552895" style="color:#111827;text-decoration:none">+971 4 255 2895</a></td></tr>
+          <tr><td style="padding:3px 0">💬 <a href="https://wa.me/971502277187" style="color:#111827;text-decoration:none">WhatsApp +971 50 227 7187</a></td></tr>
+          <tr><td style="padding:3px 0">📍 Port Saeed, Deira, Dubai, UAE</td></tr>
+        </table>
+      </div>
+      <div style="margin-top:26px">
+        <a href="${BRAND.site}" style="background:${BRAND.ink};color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:999px;font-size:14px;font-weight:700;display:inline-block">Visit our website</a>
+      </div>
+      <p style="margin:24px 0 0;color:#6b7280;font-size:14px;line-height:1.6">Warm regards,<br><strong style="color:${BRAND.ink}">Alwahaa Documents Clearing</strong></p>
+    </td></tr>`);
 }
 
 async function sendMail({ name, email, phone, message, ip, ua }) {
@@ -122,7 +253,7 @@ async function sendMail({ name, email, phone, message, ip, ua }) {
     to: toEmail,
     replyTo: `${safeName} <${safeEmail}>`,
     subject: `New website enquiry from ${safeName}`,
-    body: [
+    text: [
       "New enquiry from the Alwahaa website:",
       "",
       `Name: ${safeName}`,
@@ -137,6 +268,7 @@ async function sendMail({ name, email, phone, message, ip, ua }) {
       `User-Agent: ${ua || "-"}`,
       `Received: ${new Date().toISOString()}`,
     ].join("\r\n"),
+    html: enquiryHtml({ name: safeName, email: safeEmail, phone, message, ip, ua }),
   });
 
   // 2) Confirmation auto-reply to the client (best effort — never fails the request).
@@ -148,7 +280,7 @@ async function sendMail({ name, email, phone, message, ip, ua }) {
       to: safeEmail,
       replyTo: `Alwahaa Documents Clearing <${toEmail}>`,
       subject: "We received your enquiry — Alwahaa Documents Clearing",
-      body: [
+      text: [
         `Dear ${safeName},`,
         "",
         "Thank you for contacting Alwahaa Documents Clearing.",
@@ -162,6 +294,7 @@ async function sendMail({ name, email, phone, message, ip, ua }) {
         "+971 4 255 2895 · info@alwahaagroup.com",
         "www.alwahaagroup.com",
       ].join("\r\n"),
+      html: autoReplyHtml({ name: safeName, message }),
     });
   } catch (autoReplyError) {
     console.error("Auto-reply to client failed (non-fatal):", autoReplyError.message);
@@ -230,3 +363,5 @@ export default async function handler(req, res) {
     return redirect(res, "error");
   }
 }
+
+export { enquiryHtml, autoReplyHtml };
