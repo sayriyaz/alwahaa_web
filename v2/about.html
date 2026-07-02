@@ -184,6 +184,22 @@
     .about-story-card span { display: inline-grid; place-items: center; width: 2rem; height: 2rem; margin-bottom: 0.9rem; border-radius: 50%; color: #1a1304; background: linear-gradient(135deg, var(--gold-light), var(--gold-soft)); font-weight: 800; }
     .about-story-card h3 { font-size: 1.05rem; margin-bottom: 0.45rem; }
     .about-story-card p { font-size: 0.92rem; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    @media (max-width: 860px) { .team-grid { grid-template-columns: 1fr; } }
+    .team-card { padding: 1.6rem 1.4rem; border-radius: var(--r-lg); border: 1px solid var(--line); background: var(--bg-elevated); box-shadow: var(--shadow-sm); text-align: center; transition: transform 0.4s var(--ease-out), border-color 0.4s; }
+    .team-card:hover { transform: translateY(-3px); border-color: var(--gold-soft); }
+    .team-avatar { width: 104px; height: 104px; margin: 0 auto 1.1rem; border-radius: 50%; overflow: hidden; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 2rem; letter-spacing: -0.02em; color: #1a1304; background: linear-gradient(135deg, var(--gold-light), var(--gold-soft)); box-shadow: 0 8px 24px rgba(176,141,58,0.28); }
+    .team-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 38% 15%; }
+    .team-card h3 { font-size: 1.12rem; margin-bottom: 0.25rem; }
+    .team-role { color: var(--gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
+    .team-langs { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+    .team-langs span { font-size: 0.72rem; font-weight: 600; color: var(--ink-soft); padding: 0.28rem 0.65rem; border-radius: var(--r-pill); border: 1px solid var(--line-strong); background: var(--bg-tint); }
+    .team-langs span::before { content: ""; display: inline-block; width: 5px; height: 5px; margin-right: 0.4rem; border-radius: 50%; background: var(--gold-soft); vertical-align: middle; }
+    .team-cred { color: var(--ink-mute); font-size: 0.82rem; font-style: italic; margin: -0.05rem 0 0.35rem; }
+    .team-role { margin-bottom: 0.9rem; }
+    .team-contact { display: inline-flex; align-items: center; gap: 0.45rem; margin-top: 1.1rem; padding: 0.5rem 1rem; border-radius: var(--r-pill); border: 1px solid var(--gold-soft); color: var(--gold); font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: background 0.3s, color 0.3s; }
+    .team-contact:hover { background: var(--gold); color: #fff; }
+    .team-contact svg { width: 15px; height: 15px; }
     .about-stats { margin-top: 1rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
     @media (max-width: 680px) { .about-stats { grid-template-columns: 1fr; } }
     .about-stat { padding: 1rem; border-radius: var(--r-md); border: 1px solid var(--line); background: var(--bg-tint); }
@@ -399,6 +415,43 @@
           <article class="value-card">
             <h3>Habib Rahman</h3>
             <p><strong>Director</strong><br />Supports company leadership, service delivery and the continuing development of Alwahaa's client experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section-pad" id="team" style="padding-top:0">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Our team</p>
+          <h2>The people who move your file.</h2>
+          <p class="lead">A multilingual desk that handles your paperwork end to end — speaking your language across Tamil, Arabic, Hindi, English, Malayalam and Sinhala.</p>
+        </div>
+        <div class="team-grid" data-stagger>
+          <article class="team-card">
+            <div class="team-avatar"><img src="./assets/img/team-mohammed-abdullah.jpg" alt="Mohammed Abdullah, GM and Senior PRO at Alwahaa Documents Clearing" loading="lazy" width="104" height="104" /></div>
+            <h3>Mohammed Abdullah</h3>
+            <p class="team-cred">MA (Arabic)</p>
+            <p class="team-role">GM · Senior PRO</p>
+            <div class="team-langs"><span>Tamil</span><span>Arabic</span><span>Urdu</span><span>Hindi</span><span>English</span><span>Malayalam</span></div>
+            <a class="team-contact" href="https://wa.me/971502277187" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.2-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>+971 50 227 7187</a>
+          </article>
+          <article class="team-card">
+            <div class="team-avatar"><img src="./assets/img/team-ahamed-meeran.jpg" alt="Ahamed Meeran, Assistant PRO at Alwahaa Documents Clearing" loading="lazy" width="104" height="104" /></div>
+            <h3>Ahamed Meeran</h3>
+            <p class="team-cred">B.Com</p>
+            <p class="team-role">Assistant PRO</p>
+            <div class="team-langs"><span>Tamil</span><span>English</span><span>Hindi</span><span>Arabic</span></div>
+            <a class="team-contact" href="https://wa.me/971526654290" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.2-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>+971 52 665 4290</a>
+          </article>
+          <article class="team-card">
+            <div class="team-avatar"><img src="./assets/img/team-kogila-priya.jpg" alt="Kogila Priya, Accountant at Alwahaa Documents Clearing" loading="lazy" width="104" height="104" /></div>
+            <h3>Kogila Priya</h3>
+            <p class="team-cred">B.Com</p>
+            <p class="team-role">Accountant</p>
+            <div class="team-langs"><span>Tamil</span><span>English</span><span>Sinhala</span><span>Hindi</span><span>Malayalam</span></div>
+            <a class="team-contact" href="https://wa.me/971527060592" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.2-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>+971 52 706 0592</a>
           </article>
         </div>
       </div>
