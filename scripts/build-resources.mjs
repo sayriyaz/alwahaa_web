@@ -53,7 +53,7 @@ const head = ({ title, desc, canonical, schema, P }) => `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="stylesheet" href="${P.asset}assets/css/main.css?v=20260627e" />
+  <link rel="stylesheet" href="${P.asset}assets/css/main.css?v=20260627n" />
 ${schema.map((s) => `  <script type="application/ld+json">${JSON.stringify(s)}</script>`).join("\n")}
   <script>
     (function () {
@@ -141,7 +141,7 @@ const footer = (P, withGlobe) => `  <footer class="site-footer">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-${withGlobe ? `  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>\n` : ""}  <script src="${P.asset}assets/js/main.js?v=20260627a" defer></script>`;
+${withGlobe ? `  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>\n` : ""}  <script src="${P.asset}assets/js/main.js?v=20260627m" defer></script>`;
 
 // ---- authority page ------------------------------------------------------
 function authorityPage(a) {
