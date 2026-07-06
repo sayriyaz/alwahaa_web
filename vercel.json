@@ -35,7 +35,8 @@
     { "source": "/family-visa-emirates-id-uae", "destination": "/blog/family-visa-emirates-id-uae", "permanent": true },
     { "source": "/pro-services-dubai", "destination": "/blog/pro-services-dubai", "permanent": true },
     { "source": "/dubai-it-campaign", "destination": "/blog/dubai-it-campaign", "permanent": true },
-    { "source": "/indian-passport-appointment-uae", "destination": "/blog/indian-passport-appointment-uae", "permanent": true }
+    { "source": "/indian-passport-appointment-uae", "destination": "/blog/indian-passport-appointment-uae", "permanent": true },
+    { "source": "/police-clearance-certificate-uae", "destination": "/blog/police-clearance-certificate-uae", "permanent": true }
   ],
   "rewrites": [
     { "source": "/blog/mainland-company-dubai", "destination": "/v2/mainland-company-dubai" },
