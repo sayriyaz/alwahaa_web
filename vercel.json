@@ -26,7 +26,16 @@
     { "source": "/services.php", "destination": "/#services", "permanent": true },
     { "source": "/index.php", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/home.php", "destination": "/", "permanent": true }
+    { "source": "/home.php", "destination": "/", "permanent": true },
+    { "source": "/mainland-company-dubai", "destination": "/blog/mainland-company-dubai", "permanent": true },
+    { "source": "/golden-visa-uae", "destination": "/blog/uae-golden-visa", "permanent": true },
+    { "source": "/free-zone-vs-mainland-dubai", "destination": "/blog/free-zone-vs-mainland-dubai", "permanent": true },
+    { "source": "/document-attestation-uae", "destination": "/blog/document-attestation-uae", "permanent": true },
+    { "source": "/corporate-tax-vat-uae", "destination": "/blog/corporate-tax-vat-uae", "permanent": true },
+    { "source": "/family-visa-emirates-id-uae", "destination": "/blog/family-visa-emirates-id-uae", "permanent": true },
+    { "source": "/pro-services-dubai", "destination": "/blog/pro-services-dubai", "permanent": true },
+    { "source": "/dubai-it-campaign", "destination": "/blog/dubai-it-campaign", "permanent": true },
+    { "source": "/indian-passport-appointment-uae", "destination": "/blog/indian-passport-appointment-uae", "permanent": true }
   ],
   "rewrites": [
     { "source": "/blog/mainland-company-dubai", "destination": "/v2/mainland-company-dubai" },
