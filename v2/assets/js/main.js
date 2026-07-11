@@ -296,28 +296,10 @@
   })();
 
   /* ------------------------------------------------------------------ *
-   * 10. Custom cursor + magnetic + tilt + spotlight
+   * 10. Magnetic + tilt + spotlight (custom cursor removed — native pointer)
    * ------------------------------------------------------------------ */
   function initPointer() {
     if (isTouch || prefersReduced || innerWidth <= 860) return;
-    var dot = doc.querySelector(".cursor-dot");
-    var ring = doc.querySelector(".cursor-ring");
-    if (!dot || !ring) return;
-    doc.body.classList.add("cursor-active");
-    var mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
-    window.addEventListener("mousemove", function (e) {
-      mx = e.clientX; my = e.clientY;
-      dot.style.transform = "translate(" + mx + "px," + my + "px) translate(-50%,-50%)";
-    });
-    (function loop() {
-      rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
-      ring.style.transform = "translate(" + rx + "px," + ry + "px) translate(-50%,-50%)";
-      requestAnimationFrame(loop);
-    })();
-    doc.querySelectorAll("[data-cursor], a, button").forEach(function (el) {
-      el.addEventListener("mouseenter", function () { ring.classList.add("is-hover"); });
-      el.addEventListener("mouseleave", function () { ring.classList.remove("is-hover"); });
-    });
 
     // Magnetic buttons — set --tx/--ty so the CSS :active scale still composes
     doc.querySelectorAll("[data-magnetic]").forEach(function (el) {
