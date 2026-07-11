@@ -186,7 +186,7 @@ ${nav(P)}
             <h2 style="margin-top:2.4rem">Services</h2>
             <ul class="res-check">${a.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>
 ${a.feeTable ? `
-            <h2 style="margin-top:2.4rem">${esc(a.feeTable.heading)}</h2>
+            <h2 id="fees" style="margin-top:2.4rem;scroll-margin-top:6rem">${esc(a.feeTable.heading)}</h2>
             <div style="overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg)">
               <table style="width:100%;border-collapse:collapse;font-size:0.92rem;min-width:480px">
                 <thead><tr>${a.feeTable.columns.map((c) => `<th style="text-align:left;padding:0.8rem 1rem;border-bottom:1px solid var(--line-strong);color:var(--gold);font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase">${esc(c)}</th>`).join("")}</tr></thead>
