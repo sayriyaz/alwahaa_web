@@ -338,7 +338,7 @@
       "category": "Embassy & Consular",
       "tagline": "Passport renewal, PCC, visa, attestation and consular support for Indian citizens in the UAE.",
       "metaTitle": "Passport Renewal (Indian Citizens) | Indian Embassy Services UAE",
-      "metaDescription": "Indian passport renewal in the UAE: book appointments at book.passportindiauae.com (from 5 July 2026), limited walk-ins 9-11am, PCC, visa and attestation guidance for Alwahaa clients.",
+      "metaDescription": "Indian passport renewal in the UAE: services now direct from the Embassy and Consulate, book at book.passportindiauae.com, revised fees from 1 July 2026 — full fee table, PCC, visa and attestation guidance.",
       "labels": {
         "breadcrumb": "Passport Renewal (Indian Citizens)",
         "card": "Passport Renewal (Indian Citizens)",
@@ -355,8 +355,8 @@
       },
       "whatIs": [
         "Indian Embassy and Consulate services in the UAE support Indian citizens and applicants with passport renewal or reissue, Police Clearance Certificate (PCC), visa, attestation and other consular services.",
-        "Update (5 July 2026): the Embassy of India, Abu Dhabi and the Consulate General of India, Dubai have launched an online appointment portal for Passport, Visa & Attestation services at book.passportindiauae.com. All applicants are encouraged to book an appointment before visiting.",
-        "From 6 July 2026, walk-in services are available only on a limited scale from 9:00 am to 11:00 am, with priority for new-born baby cases and Emergency Certificates. All other applicants should book online to avoid long waiting times.",
+        "Important update: with effect from 1 July 2026, BLS International and SGIVS Global are no longer the outsourced service providers of the Embassy of India, Abu Dhabi and the Consulate General of India, Dubai. Passport, Visa and Attestation services are now rendered directly by the Embassy and the Consulate from their own premises.",
+        "Appointments are booked online at book.passportindiauae.com (announced 5 July 2026). From 6 July 2026, walk-in services run only on a limited scale from 9:00 am to 11:00 am, with priority for new-born baby cases and Emergency Certificates.",
         "Applicants with a prior appointment are allowed entry 15 minutes before the appointment time. Only the applicant is allowed inside the premises, except for minor applicants where both parents may be present."
       ],
       "services": [
@@ -419,12 +419,75 @@
         "pcc",
         "police clearance certificate",
         "bls international",
-        "al hind",
         "indian consulate dubai",
         "visa",
         "attestation",
-        "consular services"
-      ]
+        "consular services",
+        "indian passport fees uae",
+        "passport fee revision 2026",
+        "indian embassy direct services"
+      ],
+      "feeTable": {
+        "heading": "Revised passport fees (from 1 July 2026)",
+        "columns": [
+          "Particulars",
+          "Normal fee (AED)",
+          "Tatkal fee (AED, incl. normal)"
+        ],
+        "rows": [
+          [
+            "Fresh / reissue passport, 36 pages (18+ yrs)",
+            "450",
+            "900"
+          ],
+          [
+            "Fresh / reissue passport, 60 pages (18+ yrs)",
+            "630",
+            "1,080"
+          ],
+          [
+            "Lost / damaged passport, 36 pages",
+            "900",
+            "1,350"
+          ],
+          [
+            "Lost / damaged passport, 60 pages",
+            "1,080",
+            "1,530"
+          ],
+          [
+            "Minor (under 18): fresh / reissue, 36 pages",
+            "325",
+            "775"
+          ],
+          [
+            "Minor: lost / damaged, 36 pages",
+            "775",
+            "1,225"
+          ],
+          [
+            "Minor under 8 years: fresh passport (10% discount)",
+            "295",
+            "700"
+          ],
+          [
+            "Emergency Certificate",
+            "60",
+            "—"
+          ],
+          [
+            "Certificate of Identity",
+            "180",
+            "—"
+          ],
+          [
+            "PCC / Surrender Certificate / GEP verification / misc.",
+            "145",
+            "—"
+          ]
+        ],
+        "note": "Per the Consulate General of India, Dubai notification dated 30 June 2026, uniformly applicable at the Embassy of India Abu Dhabi, CGI Dubai and Indian Consular Application Centres. Adult passports valid up to 10 years; minor passports 5 years or until age 18. Indian Community Welfare Fund (ICWF) charges may apply additionally. Always confirm current fees on the official website before applying."
+      }
     }
   ]
 }
