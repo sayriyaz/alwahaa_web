@@ -322,6 +322,22 @@ section { position: relative; }
 }
 .nav__links a:hover { color: var(--ink); background: var(--bg-tint); }
 .nav__right { display: flex; align-items: center; gap: 0.5rem; }
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.35rem;
+  height: 2.35rem;
+  padding: 0 0.8rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+.lang-switch:hover { border-color: var(--gold-soft); color: var(--gold); background: var(--surface); }
 
 .theme-toggle {
   width: 42px; height: 42px; border-radius: 50%;

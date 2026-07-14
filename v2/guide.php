@@ -6,7 +6,7 @@ $guides = [
         'title' => 'Dubai Free Zone vs Mainland Company Formation',
         'short' => 'Free zone vs mainland',
         'category' => 'Business Setup',
-        'description' => 'Compare Dubai mainland and free zone company formation, including market access, office needs, visas and licensing support from Alwahaa Documents Clearing.',
+        'description' => 'Compare Dubai mainland and free zone company formation, including market access, office needs, visas and licensing support from Alwahaa Document Clearing LLC.',
         'image' => 'business-setup.webp',
         'image_alt' => 'Alwahaa guide comparing Dubai mainland and free zone company formation',
         'canonical' => 'free-zone-vs-mainland-dubai',
@@ -27,14 +27,14 @@ $guides = [
             <li>Will the company tender for government or large corporate contracts?</li>
           </ul>
           <h2>How Alwahaa helps</h2>
-          <p>Alwahaa Documents Clearing compares suitable mainland and free zone routes, confirms the required documents, reserves the trade name, coordinates approvals and handles licence, establishment card and visa steps. We also support offshore formation when that structure better matches the business objective.</p>
+          <p>Alwahaa Document Clearing LLC compares suitable mainland and free zone routes, confirms the required documents, reserves the trade name, coordinates approvals and handles licence, establishment card and visa steps. We also support offshore formation when that structure better matches the business objective.</p>
           <p>For official Dubai setup information, see <a href="https://www.investindubai.gov.ae/" target="_blank" rel="noopener">Invest in Dubai</a>.</p>'
     ],
     'document-attestation' => [
         'title' => 'UAE Document Attestation: A Practical Guide',
         'short' => 'Document attestation',
         'category' => 'Legal Documents',
-        'description' => 'Understand UAE certificate attestation, embassy coordination, MOFA steps, legal translation and notary support with Alwahaa Documents Clearing.',
+        'description' => 'Understand UAE certificate attestation, embassy coordination, MOFA steps, legal translation and notary support with Alwahaa Document Clearing LLC.',
         'image' => 'attestation.webp',
         'image_alt' => 'Alwahaa UAE certificate attestation and legal translation guide',
         'canonical' => 'document-attestation-uae',
@@ -60,7 +60,7 @@ $guides = [
         'title' => 'UAE Corporate Tax and VAT for New Businesses',
         'short' => 'Corporate tax and VAT',
         'category' => 'Compliance',
-        'description' => 'A practical guide to UAE VAT registration, returns, corporate tax assistance, accounting records and compliance support from Alwahaa Documents Clearing.',
+        'description' => 'A practical guide to UAE VAT registration, returns, corporate tax assistance, accounting records and compliance support from Alwahaa Document Clearing LLC.',
         'image' => 'tax.webp',
         'image_alt' => 'Alwahaa UAE corporate tax VAT and accounting compliance guide',
         'canonical' => 'corporate-tax-vat-uae',
@@ -87,7 +87,7 @@ $guides = [
         'title' => 'UAE Family Visa and Emirates ID Process',
         'short' => 'Family visa and Emirates ID',
         'category' => 'Visas',
-        'description' => 'Learn the UAE family sponsorship, entry permit, medical typing, residency and Emirates ID process with support from Alwahaa Documents Clearing.',
+        'description' => 'Learn the UAE family sponsorship, entry permit, medical typing, residency and Emirates ID process with support from Alwahaa Document Clearing LLC.',
         'image' => 'visa.webp',
         'image_alt' => 'Alwahaa UAE family visa medical typing and Emirates ID guide',
         'canonical' => 'family-visa-emirates-id-uae',
@@ -113,7 +113,7 @@ $guides = [
           <h2>Renewals and cancellations</h2>
           <p>Residency and Emirates ID records should be renewed before expiry. Changes in employment, sponsorship or family status can also require cancellation, transfer or a new application.</p>
           <h2>How Alwahaa helps</h2>
-          <p>Alwahaa Documents Clearing checks the case, arranges typing, coordinates attestation where needed and supports entry permits, status changes, medical typing, Emirates ID, renewals and cancellations through GDRFA and ICP channels.</p>'
+          <p>Alwahaa Document Clearing LLC checks the case, arranges typing, coordinates attestation where needed and supports entry permits, status changes, medical typing, Emirates ID, renewals and cancellations through GDRFA and ICP channels.</p>'
     ],
     'pro-services-dubai' => [
         'title' => 'What Corporate PRO Services Cover in Dubai',
@@ -141,7 +141,7 @@ $guides = [
             <li>Company, labour and immigration records are easier to keep aligned.</li>
           </ul>
           <h2>How Alwahaa helps</h2>
-          <p>Alwahaa Documents Clearing provides a dedicated Dubai service desk for corporate PRO and government work, from document collection and typing to submission tracking and completed-document delivery.</p>'
+          <p>Alwahaa Document Clearing LLC provides a dedicated Dubai service desk for corporate PRO and government work, from document collection and typing to submission tracking and completed-document delivery.</p>'
     ],
 ];
 
@@ -161,8 +161,8 @@ $schema = [
     'datePublished' => $guide['date'],
     'dateModified' => '2026-06-11',
     'inLanguage' => 'en-AE',
-    'author' => ['@type' => 'Organization', '@id' => 'https://www.alwahaagroup.com/#business', 'name' => 'Alwahaa Documents Clearing'],
-    'publisher' => ['@type' => 'Organization', '@id' => 'https://www.alwahaagroup.com/#business', 'name' => 'Alwahaa Documents Clearing', 'logo' => ['@type' => 'ImageObject', 'url' => 'https://www.alwahaagroup.com/assets/img/logo.png']],
+    'author' => ['@type' => 'Organization', '@id' => 'https://www.alwahaagroup.com/#business', 'name' => 'Alwahaa Document Clearing LLC'],
+    'publisher' => ['@type' => 'Organization', '@id' => 'https://www.alwahaagroup.com/#business', 'name' => 'Alwahaa Document Clearing LLC', 'logo' => ['@type' => 'ImageObject', 'url' => 'https://www.alwahaagroup.com/assets/img/logo.png']],
     'image' => $imageUrl,
     'mainEntityOfPage' => $canonical,
 ];
@@ -179,7 +179,7 @@ $schema = [
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <link rel="canonical" href="<?php echo htmlspecialchars($canonical); ?>" />
   <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Alwahaa Documents Clearing" />
+  <meta property="og:site_name" content="Alwahaa Document Clearing LLC" />
   <meta property="og:title" content="<?php echo htmlspecialchars($guide['title']); ?>" />
   <meta property="og:description" content="<?php echo htmlspecialchars($guide['description']); ?>" />
   <meta property="og:url" content="<?php echo htmlspecialchars($canonical); ?>" />
@@ -210,7 +210,7 @@ $schema = [
 
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="/" aria-label="Alwahaa Documents Clearing home"><img src="./assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+      <a class="brand" href="/" aria-label="Alwahaa Document Clearing LLC home"><img src="./assets/img/logo.webp" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
       <div class="nav__links">
         <a href="/about">About Us</a><a href="/services">Services</a><a href="/#process">Process</a><a href="/#faq">FAQ</a><a href="/blog" aria-current="page">Newsroom</a><a href="/contact">Contact</a>
       </div>
@@ -242,12 +242,12 @@ $schema = [
   <footer class="site-footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer__brand"><a class="brand" href="/"><img src="./assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 40 years of local experience.</p></div>
+        <div class="footer__brand"><a class="brand" href="/"><img src="./assets/img/logo.webp" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 40 years of local experience.</p></div>
         <div class="footer__col"><h4>Explore</h4><a href="/about">About Us</a><a href="/services">Services</a><a href="/blog">Newsroom</a><a href="/contact">Contact</a></div>
         <div class="footer__col"><h4>Services</h4><a href="/services">Business Setup</a><a href="/services">Visa &amp; Immigration</a><a href="/services">PRO Services</a><a href="/services">All Services</a></div>
         <div class="footer__col"><h4>Get in touch</h4><a href="tel:+97142552895">+971 4 255 2895</a><a href="https://wa.me/971502277187">WhatsApp +971 50 227 7187</a><a href="mailto:info@alwahaagroup.com">info@alwahaagroup.com</a><a href="https://maps.app.goo.gl/jDmFBcpCrozWuxY5A">Port Saeed, Deira, Dubai, UAE</a></div>
       </div>
-      <div class="footer__bottom"><p>© <span id="year">2026</span> Alwahaa Documents Clearing. All rights reserved.</p></div>
+      <div class="footer__bottom"><p>© <span id="year">2026</span> Alwahaa Document Clearing LLC. All rights reserved.</p></div>
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>

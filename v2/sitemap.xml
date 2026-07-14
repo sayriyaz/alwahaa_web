@@ -8,7 +8,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.alwahaagroup.com/assets/img/home-gateway-light.webp</image:loc>
-      <image:title>Alwahaa Documents Clearing Dubai business setup and government services</image:title>
+      <image:title>Alwahaa Document Clearing LLC Dubai business setup and government services</image:title>
     </image:image>
   </url>
   <url>
@@ -18,9 +18,14 @@
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://www.alwahaagroup.com/assets/img/about-uae-skyline-light.webp</image:loc>
-      <image:title>Alwahaa Documents Clearing about page UAE skyline</image:title>
+      <image:title>Alwahaa Document Clearing LLC about page UAE skyline</image:title>
     </image:image>
   </url>
+  <url><loc>https://www.alwahaagroup.com/ar</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://www.alwahaagroup.com/ar/about</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://www.alwahaagroup.com/ar/resources</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://www.alwahaagroup.com/ar/blog</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq><priority>0.76</priority></url>
+  <url><loc>https://www.alwahaagroup.com/ar/contact</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://www.alwahaagroup.com/resources</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.alwahaagroup.com/tools</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.alwahaagroup.com/blog</loc><lastmod>2026-07-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
