@@ -104,6 +104,14 @@ ${schema.map((s) => `  <script type="application/ld+json">${JSON.stringify(s)}</
     .res-strip h4 { font-size: 1.02rem; margin-bottom: 0.3rem; }
     .res-strip p { font-size: 0.86rem; color: var(--ink-soft); }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KX5JNG687"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4KX5JNG687');
+  </script>
 </head>`;
 
 const nav = (P) => `<body class="no-js">

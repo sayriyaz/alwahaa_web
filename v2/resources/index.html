@@ -9,11 +9,8 @@
   <meta name="description" content="Searchable UAE government directory — ICP, MOHRE, GDRFA and more — with guides and checklists for business setup, visas and documents." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <link rel="canonical" href="https://www.alwahaagroup.com/resources" />
-  <link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/resources" />
-  <link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/resources" />
-  <link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/resources" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Alwahaa Document Clearing LLC" />
+  <meta property="og:site_name" content="Alwahaa Documents Clearing" />
   <meta property="og:title" content="UAE Government Directory & Business Resources | Alwahaa" />
   <meta property="og:description" content="Searchable UAE government directory — ICP, MOHRE, GDRFA and more — with guides and checklists for business setup, visas and documents." />
   <meta property="og:url" content="https://www.alwahaagroup.com/resources" />
@@ -52,7 +49,6 @@
     .res-related { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.2rem; }
     .res-related a { font-size: 0.85rem; padding: 0.5rem 1rem; border-radius: var(--r-pill); border: 1px solid var(--line); color: var(--ink-soft); transition: color 0.3s, border-color 0.3s, transform 0.3s var(--ease-out); }
     .res-related a:hover { color: var(--ink); border-color: var(--gold-soft); transform: translateY(-2px); }
-    .lang-switch { display:inline-flex; align-items:center; gap:.35rem; margin-inline-end:.6rem; padding:.45rem .9rem; border:1px solid var(--line-strong); border-radius:var(--r-pill); font-size:.82rem; font-weight:700; color:var(--ink); text-decoration:none; }
     /* directory hub */
     .dir-search { display: flex; align-items: center; gap: 0.7rem; max-width: 560px; margin: 2rem 0 0; padding: 1rem 1.2rem; border-radius: var(--r-pill); background: var(--surface-solid); border: 1px solid var(--line-strong); transition: border-color 0.3s, box-shadow 0.3s; }
     [data-theme="dark"] .dir-search { background: var(--bg-tint); }
@@ -75,6 +71,14 @@
     .res-strip h4 { font-size: 1.02rem; margin-bottom: 0.3rem; }
     .res-strip p { font-size: 0.86rem; color: var(--ink-soft); }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KX5JNG687"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4KX5JNG687');
+  </script>
 </head>
 <body class="no-js">
   <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__inner"><img class="preloader__logo" src="assets/img/logo.webp" alt="" width="64" height="74" /><div class="preloader__bar"><i id="pl-bar"></i></div><div class="preloader__num"><span id="pl-num">0</span>%</div></div></div>
@@ -85,18 +89,17 @@
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html" aria-label="Alwahaa Document Clearing LLC home"><img src="assets/img/logo.webp" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+      <a class="brand" href="index.html" aria-label="Alwahaa Documents Clearing home"><img src="assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
       <div class="nav__links">
         <a href="about.html">About Us</a><a href="/#services">Services</a><a href="/resources" aria-current="page">Resources</a><a href="blog.html">Newsroom</a><a href="contact.php">Contact</a>
       </div>
       <div class="nav__right">
-        <a class="lang-switch" href="/ar/resources" hreflang="ar" lang="ar" aria-label="العربية">عربي</a>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></button>
         <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
-  <div class="mobile-nav" id="mobileNav"><a href="about.html"><span>01</span>About Us</a><a href="/#services"><span>02</span>Services</a><a href="/resources"><span>03</span>Resources</a><a href="blog.html"><span>04</span>Newsroom</a><a href="contact.php"><span>05</span>Contact</a><a href="/ar/resources" hreflang="ar" lang="ar"><span>AR</span>العربية</a></div>
+  <div class="mobile-nav" id="mobileNav"><a href="about.html"><span>01</span>About Us</a><a href="/#services"><span>02</span>Services</a><a href="/resources"><span>03</span>Resources</a><a href="blog.html"><span>04</span>Newsroom</a><a href="contact.php"><span>05</span>Contact</a></div>
   <main>
     <section class="hero" style="min-height:clamp(440px,62vh,640px);overflow:hidden;display:flex;align-items:center;padding-block:clamp(6.5rem,9vw,7.5rem) 2.5rem">
       <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
@@ -140,12 +143,12 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer__brand"><a class="brand" href="index.html"><img src="assets/img/logo.webp" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 42 years of local experience.</p></div>
+        <div class="footer__brand"><a class="brand" href="index.html"><img src="assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 42 years of local experience.</p></div>
         <div class="footer__col"><h4>Explore</h4><a href="about.html">About Us</a><a href="/#services">Services</a><a href="/resources">Resources</a><a href="blog.html">Newsroom</a><a href="contact.php">Contact</a></div>
         <div class="footer__col"><h4>Government links</h4><a href="/resources/icp">ICP</a><a href="/resources/mohre">MOHRE</a><a href="/resources/gdrfa">GDRFA</a><a href="/resources/det">DET</a><a href="/resources/mofa">MOFA</a><a href="/resources/indian-passport-renewal">Indian Passport Renewal</a></div>
         <div class="footer__col"><h4>Get in touch</h4><a href="tel:+97142552895">+971 4 255 2895</a><a href="https://wa.me/971502277187">WhatsApp +971 50 227 7187</a><a href="mailto:info@alwahaagroup.com">info@alwahaagroup.com</a></div>
       </div>
-      <div class="footer__bottom"><p>© <span id="year">2026</span> Alwahaa Document Clearing LLC. All rights reserved.</p></div>
+      <div class="footer__bottom"><p>© <span id="year">2026</span> Alwahaa Documents Clearing. All rights reserved.</p></div>
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
