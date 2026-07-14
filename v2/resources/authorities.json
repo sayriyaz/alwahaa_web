@@ -65,7 +65,8 @@
         "citizenship",
         "identity",
         "federal authority"
-      ]
+      ],
+      "metaDescription": "ICP handles Emirates ID, residency and citizenship services in the UAE. What it does, key services, FAQs — and how Alwahaa manages the paperwork for you."
     },
     {
       "slug": "mohre",
@@ -131,7 +132,8 @@
         "labour complaint",
         "emiratisation",
         "tasheel"
-      ]
+      ],
+      "metaDescription": "MOHRE governs UAE work permits, labour contracts and Tasheel services. Key services, FAQs — and how Alwahaa handles the process end to end."
     },
     {
       "slug": "gdrfa",
@@ -198,7 +200,8 @@
         "immigration dubai",
         "visa cancellation",
         "family sponsorship"
-      ]
+      ],
+      "metaDescription": "GDRFA Dubai manages entry permits, residence visas and status changes. Key services, FAQs — and how Alwahaa handles the paperwork for you."
     },
     {
       "slug": "det",
@@ -265,7 +268,8 @@
         "commercial registration",
         "licence renewal",
         "initial approval"
-      ]
+      ],
+      "metaDescription": "Dubai's DET issues trade licences and business registrations. Key services, FAQs — and how Alwahaa manages licensing from start to finish."
     },
     {
       "slug": "mofa",
@@ -328,7 +332,8 @@
         "document authentication",
         "embassy attestation",
         "legalisation"
-      ]
+      ],
+      "metaDescription": "MOFA attests documents for use in and outside the UAE. Attestation steps, FAQs — and how Alwahaa completes the chain for you."
     },
     {
       "slug": "indian-passport-renewal",
@@ -337,8 +342,8 @@
       "flag": "🇮🇳",
       "category": "Embassy & Consular",
       "tagline": "Passport renewal, PCC, visa, attestation and consular support for Indian citizens in the UAE.",
-      "metaTitle": "Passport Renewal (Indian Citizens) | Indian Embassy Services UAE",
-      "metaDescription": "Indian passport renewal in the UAE: services now direct from the Embassy and Consulate, book at book.passportindiauae.com, revised fees from 1 July 2026 — full fee table, PCC, visa and attestation guidance.",
+      "metaTitle": "Indian Passport Renewal UAE",
+      "metaDescription": "Indian passport renewal in the UAE: direct Embassy/Consulate service, booking at book.passportindiauae.com, revised fees from 1 July 2026 and FAQs.",
       "labels": {
         "breadcrumb": "Passport Renewal (Indian Citizens)",
         "card": "Passport Renewal (Indian Citizens)",

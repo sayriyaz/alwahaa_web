@@ -428,7 +428,7 @@ section { position: relative; }
   background:
     linear-gradient(90deg, var(--bg) 0%, rgba(247,247,245,0.86) 7%, rgba(247,247,245,0.08) 24%, rgba(247,247,245,0) 66%, rgba(247,247,245,0.78) 100%),
     linear-gradient(180deg, var(--bg) 0%, rgba(247,247,245,0) 12%, rgba(247,247,245,0) 78%, var(--bg) 100%),
-    url("../img/home-gateway-light.png") center right / contain no-repeat;
+    url("../img/home-gateway-light.webp") center right / contain no-repeat;
   filter: drop-shadow(0 34px 70px rgba(11,37,69,0.12));
   opacity: 0.96;
   pointer-events: none;
@@ -439,7 +439,7 @@ section { position: relative; }
   background:
     linear-gradient(90deg, var(--bg) 0%, rgba(6,8,12,0.88) 7%, rgba(6,8,12,0.10) 24%, rgba(6,8,12,0) 66%, rgba(6,8,12,0.80) 100%),
     linear-gradient(180deg, var(--bg) 0%, rgba(6,8,12,0) 12%, rgba(6,8,12,0) 78%, var(--bg) 100%),
-    url("../img/home-gateway-dark.png") center right / contain no-repeat;
+    url("../img/home-gateway-dark.webp") center right / contain no-repeat;
   filter: saturate(1.06) brightness(1.03) drop-shadow(0 38px 78px rgba(0,0,0,0.42));
   opacity: 0.98;
 }

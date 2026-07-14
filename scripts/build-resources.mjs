@@ -147,7 +147,7 @@ ${withGlobe ? `  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r1
 function authorityPage(a) {
   const P = L("detail");
   const canonical = `${SITE}/resources/${a.slug}`;
-  const title = a.metaTitle ? `${esc(a.metaTitle)} | Alwahaa` : `${esc(a.name)} (${esc(a.abbr)}) — Services, FAQs & Official Link | Alwahaa`;
+  const title = a.metaTitle ? `${esc(a.metaTitle)} | Alwahaa` : `${esc(a.abbr)} UAE — Services, FAQs & Guide | Alwahaa`;
   const desc = a.metaDescription ? esc(a.metaDescription) : `${esc(a.abbr)}: ${esc(a.tagline)} What it is, services, when you need it, FAQs and the official website — plus how Alwahaa can handle the process for you.`;
   const breadcrumb = label(a, "breadcrumb", a.abbr);
   const h1 = label(a, "h1", `${a.abbr} — ${a.name}`);
@@ -227,7 +227,7 @@ function hubPage(authorities) {
   const P = L("hub");
   const canonical = `${SITE}/resources`;
   const title = "UAE Government Directory & Business Resources | Alwahaa";
-  const desc = "Searchable UAE government directory — ICP, MOHRE, GDRFA and more — plus calculators, guides and checklists for business setup, visas and document clearing in Dubai.";
+  const desc = "Searchable UAE government directory — ICP, MOHRE, GDRFA and more — with guides and checklists for business setup, visas and documents.";
   const schema = [
     { "@context": "https://schema.org", "@type": "CollectionPage", name: title, url: canonical, about: authorities.map((a) => ({ "@type": "GovernmentService", name: a.name, alternateName: label(a, "schemaAlternate", a.abbr) })) }
   ];
