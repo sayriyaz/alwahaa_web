@@ -115,7 +115,7 @@ ${schema.map((s) => `  <script type="application/ld+json">${JSON.stringify(s)}</
 </head>`;
 
 const nav = (P) => `<body class="no-js">
-  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__inner"><img class="preloader__logo" src="${P.asset}assets/img/logo.webp" alt="" width="64" height="74" /><div class="preloader__bar"><i id="pl-bar"></i></div><div class="preloader__num"><span id="pl-num">0</span>%</div></div></div>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__inner"><img class="preloader__logo" src="${P.asset}assets/img/logo.webp" alt="" width="64" height="64" /><div class="preloader__bar"><i id="pl-bar"></i></div><div class="preloader__num"><span id="pl-num">0</span>%</div></div></div>
   <div class="atmosphere" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
   <div class="noise" aria-hidden="true"></div>
   <div class="cursor-ring" aria-hidden="true"></div>
@@ -123,7 +123,7 @@ const nav = (P) => `<body class="no-js">
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="${P.home}" aria-label="Alwahaa Documents Clearing home"><img src="${P.asset}assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+      <a class="brand" href="${P.home}" aria-label="Alwahaa Documents Clearing home"><img src="${P.asset}assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="32" height="32" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
       <div class="nav__links">
         <a href="${P.about}">About Us</a><a href="${P.services}">Services</a><a href="${P.resHub}" aria-current="page">Resources</a><a href="${P.blog}">Newsroom</a><a href="${P.contact}">Contact</a>
       </div>
@@ -138,7 +138,7 @@ const nav = (P) => `<body class="no-js">
 const footer = (P, withGlobe) => `  <footer class="site-footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer__brand"><a class="brand" href="${P.home}"><img src="${P.asset}assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 42 years of local experience.</p></div>
+        <div class="footer__brand"><a class="brand" href="${P.home}"><img src="${P.asset}assets/img/logo.webp" alt="Alwahaa Documents Clearing logo" width="32" height="32" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 42 years of local experience.</p></div>
         <div class="footer__col"><h4>Explore</h4><a href="${P.about}">About Us</a><a href="${P.services}">Services</a><a href="${P.resHub}">Resources</a><a href="${P.blog}">Newsroom</a><a href="${P.contact}">Contact</a></div>
         <div class="footer__col"><h4>Government links</h4>${data.authorities.map((a) => `<a href="${P.res}${a.slug}">${esc(label(a, "footer", a.abbr))}</a>`).join("")}</div>
         <div class="footer__col"><h4>Get in touch</h4><a href="tel:+97142552895">+971 4 255 2895</a><a href="https://wa.me/971502277187">WhatsApp +971 50 227 7187</a><a href="mailto:info@alwahaagroup.com">info@alwahaagroup.com</a></div>

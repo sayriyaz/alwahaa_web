@@ -135,7 +135,7 @@ function emailShell(inner) {
       <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border:1px solid #ececec;border-radius:16px;overflow:hidden">
         <tr><td style="padding:22px 30px;border-bottom:1px solid #f0f0ee">
           <table role="presentation" width="100%"><tr>
-            <td style="vertical-align:middle"><img src="${BRAND.logo}" width="42" height="48" alt="Alwahaa" style="display:block;border:0"></td>
+            <td style="vertical-align:middle"><img src="${BRAND.logo}" width="44" height="44" alt="Alwahaa" style="display:block;border:0"></td>
             <td align="right" style="vertical-align:middle;font-size:15px;font-weight:700;color:${BRAND.ink};letter-spacing:.2px">Alwahaa <span style="color:${BRAND.gold}">Documents Clearing</span></td>
           </tr></table>
         </td></tr>
