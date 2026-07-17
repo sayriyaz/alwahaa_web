@@ -162,7 +162,7 @@ $schema = [
     'dateModified' => '2026-06-11',
     'inLanguage' => 'en-AE',
     'author' => ['@type' => 'Organization', '@id' => 'https://www.alwahaagroup.com/#business', 'name' => 'Alwahaa Document Clearing LLC'],
-    'publisher' => ['@type' => 'Organization', '@id' => 'https://www.alwahaagroup.com/#business', 'name' => 'Alwahaa Document Clearing LLC', 'logo' => ['@type' => 'ImageObject', 'url' => 'https://www.alwahaagroup.com/assets/img/logo.png']],
+    'publisher' => ['@type' => 'Organization', '@id' => 'https://www.alwahaagroup.com/#business', 'name' => 'Alwahaa Document Clearing LLC', 'logo' => ['@type' => 'ImageObject', 'url' => 'https://www.alwahaagroup.com/assets/img/lockup.png']],
     'image' => $imageUrl,
     'mainEntityOfPage' => $canonical,
 ];
@@ -201,7 +201,7 @@ $schema = [
   </script>
 </head>
 <body class="no-js">
-  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__inner"><img class="preloader__logo" src="./assets/img/logo.webp" alt="" width="64" height="74" /><div class="preloader__bar"><i id="pl-bar"></i></div><div class="preloader__num"><span id="pl-num">0</span>%</div></div></div>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__inner"><img class="preloader__logo" src="./assets/img/lockup.png" alt="" width="64" height="74" /><div class="preloader__bar"><i id="pl-bar"></i></div><div class="preloader__num"><span id="pl-num">0</span>%</div></div></div>
   <div class="atmosphere" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
   <div class="noise" aria-hidden="true"></div>
   <div class="cursor-ring" aria-hidden="true"></div>
@@ -210,7 +210,7 @@ $schema = [
 
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="/" aria-label="Alwahaa Document Clearing LLC home"><img src="./assets/img/logo.webp" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+      <a class="brand" href="/" aria-label="Alwahaa Document Clearing LLC home"><img src="./assets/img/lockup.png" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
       <div class="nav__links">
         <a href="/about">About Us</a><a href="/services">Services</a><a href="/#process">Process</a><a href="/#faq">FAQ</a><a href="/blog" aria-current="page">Newsroom</a><a href="/contact">Contact</a>
       </div>
@@ -242,7 +242,7 @@ $schema = [
   <footer class="site-footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer__brand"><a class="brand" href="/"><img src="./assets/img/logo.webp" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 40 years of local experience.</p></div>
+        <div class="footer__brand"><a class="brand" href="/"><img src="./assets/img/lockup.png" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a><p>Dubai business setup, visa, attestation and PRO services, backed by more than 40 years of local experience.</p></div>
         <div class="footer__col"><h4>Explore</h4><a href="/about">About Us</a><a href="/services">Services</a><a href="/blog">Newsroom</a><a href="/contact">Contact</a></div>
         <div class="footer__col"><h4>Services</h4><a href="/services">Business Setup</a><a href="/services">Visa &amp; Immigration</a><a href="/services">PRO Services</a><a href="/services">All Services</a></div>
         <div class="footer__col"><h4>Get in touch</h4><a href="tel:+97142552895">+971 4 255 2895</a><a href="https://wa.me/971502277187">WhatsApp +971 50 227 7187</a><a href="mailto:info@alwahaagroup.com">info@alwahaagroup.com</a><a href="https://maps.app.goo.gl/jDmFBcpCrozWuxY5A">Port Saeed, Deira, Dubai, UAE</a></div>

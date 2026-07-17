@@ -72,7 +72,7 @@ Top nav across all pages: **About Us · Services · Process · FAQ · Newsroom �
 
 ## Still to replace before going live
 1. **Testimonials** — omitted until real, approved client reviews are available.
-2. **Logo** — using your existing 3D mark, optimized. Swap `assets/img/logo.webp` if you have a flat brand logo.
+2. **Logo** — using your existing 3D mark, optimized. Swap `assets/img/lockup.png` if you have a flat brand logo.
 
 The full public address consistently includes Port Saeed, Deira, Dubai.
 

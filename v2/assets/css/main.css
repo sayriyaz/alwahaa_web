@@ -272,6 +272,7 @@ section { position: relative; }
 .preloader.is-done { opacity: 0; visibility: hidden; pointer-events: none; }
 .preloader__inner { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; }
 .preloader__logo { width: 64px; height: auto; filter: drop-shadow(0 8px 24px rgba(176,141,58,0.3)); animation: floaty 3s ease-in-out infinite; }
+.preloader__logo[src$="lockup.png"] { width: min(190px, 46vw); }
 .preloader__bar { width: 180px; height: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
 .preloader__bar i { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold-soft), var(--gold-light)); transition: width 0.2s linear; }
 .preloader__num { font-variant-numeric: tabular-nums; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--ink-mute); }
@@ -312,8 +313,18 @@ section { position: relative; }
 }
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; font-weight: 700; letter-spacing: -0.02em; font-size: 1.08rem; }
 .brand img { width: 30px; height: auto; }
+.brand img[src$="lockup.png"] { width: clamp(9.25rem, 12vw, 12rem); max-height: 46px; object-fit: contain; }
 .brand small { display: block; font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; }
 .brand .brand__txt { line-height: 1; }
+.brand img[src$="lockup.png"] + .brand__txt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 .nav__links { display: flex; align-items: center; gap: 0.2rem; }
 .nav__links a {

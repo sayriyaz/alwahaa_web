@@ -282,7 +282,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <div class="preloader" id="preloader" aria-hidden="true">
     <div class="preloader__inner">
-      <img class="preloader__logo" src="./assets/img/logo.webp" alt="" width="64" height="74" />
+      <img class="preloader__logo" src="./assets/img/lockup.png" alt="" width="64" height="74" />
       <div class="preloader__bar"><i id="pl-bar"></i></div>
       <div class="preloader__num"><span id="pl-num">0</span>%</div>
     </div>
@@ -299,7 +299,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
       <a class="brand" href="/" aria-label="Alwahaa Document Clearing LLC home">
-        <img src="./assets/img/logo.webp" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" />
+        <img src="./assets/img/lockup.png" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" />
         <span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span>
       </a>
       <div class="nav__links">
@@ -426,7 +426,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <a class="brand" href="/"><img src="./assets/img/logo.webp" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+          <a class="brand" href="/"><img src="./assets/img/lockup.png" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
           <p>Dubai business setup, visa, attestation and PRO services — handled end to end with calm precision since 1983.</p>
         </div>
         <div class="footer__col">
