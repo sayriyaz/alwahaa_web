@@ -190,6 +190,7 @@ ${nav(P)}
           <div class="article__body" data-reveal style="margin-top:1.6rem">
             <h2>${esc(whatHeading)}</h2>
             ${a.whatIs.map((p) => `<p>${esc(p)}</p>`).join("\n            ")}
+            ${a.calloutHtml ? `<p style="font-size:1.05rem">${a.calloutHtml}</p>` : ""}
 
             <h2 style="margin-top:2.4rem">Services</h2>
             <ul class="res-check">${a.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>
