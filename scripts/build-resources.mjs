@@ -203,6 +203,15 @@ ${a.feeTable ? `
             </div>
             ${a.feeTable.note ? `<p style="font-size:0.85rem;color:var(--ink-mute);margin-top:0.8rem">${esc(a.feeTable.note)}</p>` : ""}
 ` : ""}
+${(a.extraTables || []).map((t) => `
+            <h2${t.id ? ` id="${esc(t.id)}"` : ""} style="margin-top:2.4rem;scroll-margin-top:6rem">${esc(t.heading)}</h2>
+            <div style="overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg)">
+              <table style="width:100%;border-collapse:collapse;font-size:0.92rem;min-width:480px">
+                <thead><tr>${t.columns.map((c) => `<th style="text-align:left;padding:0.8rem 1rem;border-bottom:1px solid var(--line-strong);color:var(--gold);font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase">${esc(c)}</th>`).join("")}</tr></thead>
+                <tbody>${t.rows.map((r) => `<tr>${r.map((c, i) => `<td style="padding:0.7rem 1rem;border-bottom:1px solid var(--line);${i === 0 ? "font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--gold);font-weight:700" : ""}">${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody>
+              </table>
+            </div>
+            ${t.note ? `<p style="font-size:0.85rem;color:var(--ink-mute);margin-top:0.8rem">${esc(t.note)}</p>` : ""}`).join("\n")}
             <h2 style="margin-top:2.4rem">${esc(whenHeading)}</h2>
             <ul class="res-when">${a.whenNeeded.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>
 
