@@ -187,16 +187,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Best-effort confirmation auto-reply to the client (never blocks success).
             $client_config = $smtp_config;
             $client_config['to_email'] = $email;
-            $client_config['from_name'] = 'Alwahaa Document Clearing LLC';
+            $client_config['from_name'] = 'Alwahaa Documents Clearing LLC';
             $autoreply_body = "Dear {$name},\n\n"
-                . "Thank you for contacting Alwahaa Document Clearing LLC.\n"
+                . "Thank you for contacting Alwahaa Documents Clearing LLC.\n"
                 . "Your message has been received and our team will get back to you shortly.\n\n"
                 . "Your message:\n{$message}\n\n"
                 . "Warm regards,\n"
-                . "Alwahaa Document Clearing LLC\n"
+                . "Alwahaa Documents Clearing LLC\n"
                 . "+971 4 255 2895 \xC2\xB7 info@alwahaagroup.com\n"
                 . "www.alwahaagroup.com\n";
-            @smtp_send_mail($client_config, 'Alwahaa Document Clearing LLC', $smtp_config['to_email'], 'We received your enquiry — Alwahaa Document Clearing LLC', $autoreply_body);
+            @smtp_send_mail($client_config, 'Alwahaa Documents Clearing LLC', $smtp_config['to_email'], 'We received your enquiry — Alwahaa Documents Clearing LLC', $autoreply_body);
 
             $_SESSION['contact_success'] = [
                 'name' => $name,
@@ -217,16 +217,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#06080c" media="(prefers-color-scheme: dark)" />
-  <title>Contact Alwahaa Document Clearing LLC | Dubai Business Setup &amp; PRO Services</title>
-  <meta name="description" content="Contact Alwahaa Document Clearing LLC in Port Saeed, Deira, Dubai for company formation, visas, Emirates ID, attestation, tax and corporate PRO services." />
+  <title>Contact Alwahaa Documents Clearing LLC | Dubai Business Setup &amp; PRO Services</title>
+  <meta name="description" content="Contact Alwahaa Documents Clearing LLC in Port Saeed, Deira, Dubai for company formation, visas, Emirates ID, attestation, tax and corporate PRO services." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <link rel="canonical" href="https://www.alwahaagroup.com/contact" />
   <link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/contact" />
   <link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/contact" />
   <link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/contact" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Alwahaa Document Clearing LLC" />
-  <meta property="og:title" content="Contact Alwahaa Document Clearing LLC in Dubai" />
+  <meta property="og:site_name" content="Alwahaa Documents Clearing LLC" />
+  <meta property="og:title" content="Contact Alwahaa Documents Clearing LLC in Dubai" />
   <meta property="og:description" content="Call, WhatsApp, email or visit Alwahaa's Port Saeed, Deira office for Dubai business and government services." />
   <meta property="og:url" content="https://www.alwahaagroup.com/contact" />
   <meta property="og:image" content="https://www.alwahaagroup.com/assets/img/services/svc-pro.webp" />
@@ -246,12 +246,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     "@type": "ContactPage",
     "@id": "https://www.alwahaagroup.com/contact#webpage",
     "url": "https://www.alwahaagroup.com/contact",
-    "name": "Contact Alwahaa Document Clearing LLC",
+    "name": "Contact Alwahaa Documents Clearing LLC",
     "about": { "@id": "https://www.alwahaagroup.com/#business" },
     "mainEntity": {
       "@type": "ProfessionalService",
       "@id": "https://www.alwahaagroup.com/#business",
-      "name": "Alwahaa Document Clearing LLC",
+      "name": "Alwahaa Documents Clearing LLC",
       "telephone": ["+97142552895", "+971503554871", "+971502277187", "+971505095099"],
       "email": ["info@alwahaagroup.com", "alwahaadocument@gmail.com"],
       "address": {
@@ -298,9 +298,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <header class="site-header" id="header">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="/" aria-label="Alwahaa Document Clearing LLC home">
-        <img src="./assets/img/lockup.png" alt="Alwahaa Document Clearing LLC logo" width="30" height="35" />
-        <span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span>
+      <a class="brand" href="/" aria-label="Alwahaa Documents Clearing LLC home">
+        <img src="./assets/img/lockup.png" alt="Alwahaa Documents Clearing LLC logo" width="30" height="35" />
+        <span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Documents Clearing</small></span>
       </a>
       <div class="nav__links">
         <a href="/about" data-cursor>About Us</a>
@@ -403,7 +403,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <div><h4>Visit us</h4><div class="lines"><a href="https://maps.app.goo.gl/jDmFBcpCrozWuxY5A" target="_blank" rel="noopener">M-01 Mezzanine Floor, Ismail Anbar Building, Opp. Al Bassam Center, Port Saeed, Deira, Dubai, UAE</a><span class="muted">P.O. Box 91270 · Mon–Sat 8:00 AM – 7:00 PM · Sun closed</span></div></div>
             </div>
             <div class="contact-map">
-              <iframe title="Alwahaa Document Clearing LLC location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.311886418894!2d55.329092900000006!3d25.260659999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5dd6081e38d3%3A0x841d9f74e30a7d55!2sAlwahaa%20Documents%20Clearing!5e1!3m2!1sen!2sae!4v1781075277506!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe title="Alwahaa Documents Clearing LLC location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.311886418894!2d55.329092900000006!3d25.260659999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5dd6081e38d3%3A0x841d9f74e30a7d55!2sAlwahaa%20Documents%20Clearing!5e1!3m2!1sen!2sae!4v1781075277506!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
@@ -426,7 +426,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <a class="brand" href="/"><img src="./assets/img/lockup.png" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Document Clearing</small></span></a>
+          <a class="brand" href="/"><img src="./assets/img/lockup.png" alt="Alwahaa" width="30" height="35" /><span class="brand__txt"><span class="wahaa">Alwahaa</span><small>Documents Clearing</small></span></a>
           <p>Dubai business setup, visa, attestation and PRO services — handled end to end with calm precision since 1983.</p>
         </div>
         <div class="footer__col">
@@ -454,7 +454,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© <span id="year">2026</span> Alwahaa Document Clearing LLC. All rights reserved.</p>
+        <p>© <span id="year">2026</span> Alwahaa Documents Clearing LLC. All rights reserved.</p>
         <div class="footer__social">
           <a href="https://www.instagram.com/alwahaa_documents_clearing/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
           <a href="https://www.facebook.com/profile.php?id=61555383792308" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H7.9V14h2.4v7h3.2z"/></svg></a>
