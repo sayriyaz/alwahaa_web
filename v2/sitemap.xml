@@ -1,82 +1,297 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://www.alwahaagroup.com/</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.alwahaagroup.com/assets/img/home-gateway-light.webp</image:loc>
-      <image:title>Alwahaa Documents Clearing LLC Dubai business setup and government services</image:title>
-    </image:image>
-  </url>
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.alwahaagroup.com/about</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/about" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/about" />
     <image:image>
-      <image:loc>https://www.alwahaagroup.com/assets/img/about-uae-skyline-light.webp</image:loc>
-      <image:title>Alwahaa Documents Clearing LLC about page UAE skyline</image:title>
+      <image:loc>https://www.alwahaagroup.com/assets/img/about-creek-heritage.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/team-mohammed-abdullah.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/team-mohamed-hasim.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/team-kogila-priya.webp</image:loc>
     </image:image>
   </url>
-  <url><loc>https://www.alwahaagroup.com/ar</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq><priority>0.92</priority></url>
-  <url><loc>https://www.alwahaagroup.com/ar/about</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://www.alwahaagroup.com/ar/resources</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://www.alwahaagroup.com/ar/blog</loc><lastmod>2026-07-14</lastmod><changefreq>weekly</changefreq><priority>0.76</priority></url>
-  <url><loc>https://www.alwahaagroup.com/ar/contact</loc><lastmod>2026-07-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://www.alwahaagroup.com/resources</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.alwahaagroup.com/tools</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.alwahaagroup.com/blog</loc><lastmod>2026-07-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.alwahaagroup.com/contact</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-
-  <url><loc>https://www.alwahaagroup.com/resources/icp</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/resources/mohre</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/resources/gdrfa</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/resources/det</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/resources/mofa</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/resources/indian-passport-renewal</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://www.alwahaagroup.com/tools/corporate-tax-calculator</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/tools/public-holidays-uae</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.68</priority></url>
-
-  <url><loc>https://www.alwahaagroup.com/blog/dubai-it-campaign</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
-  <url><loc>https://www.alwahaagroup.com/blog/mainland-company-dubai</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.74</priority></url>
-  <url><loc>https://www.alwahaagroup.com/blog/uae-golden-visa</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.74</priority></url>
+  <url>
+    <loc>https://www.alwahaagroup.com/ar/about</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/about" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/about" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/about-creek-heritage.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/ar/blog</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/blog" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/blog" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/business-setup.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/ar/contact</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/contact" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/corporate-pro-abdullah.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/ar</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/dubai-hero-daylight.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/ar/resources</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/resources" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/resources" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/lockup.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/blog" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/blog" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/business-setup.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/contact</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/contact" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/corporate-pro-abdullah.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/corporate-tax-vat-uae</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/tax.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/document-attestation-uae</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/attestation.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/dubai-it-campaign</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/Dubai-IT.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/family-visa-emirates-id-uae</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/visa.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/free-zone-vs-mainland-dubai</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/business-setup.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/uae-golden-visa</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/golden-visa.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/dubai-hero-daylight.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/company-formation.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/trade-licence.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/investor-partner.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/employment-visit-visa.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/family-golden-visa.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/emirates-id-medical.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/corporate-pro-abdullah.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/labour-work-permit-hasim.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/certificate-attestation.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/legal-translation-notary.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/ejari-property.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/vat-corporate-tax.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/accounting-priya-updated.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/insurance.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com//assets/img/services/individual/rta-vehicle.webp</image:loc>
+    </image:image>
+  </url>
   <url>
     <loc>https://www.alwahaagroup.com/blog/india-independence-day-uae</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-30</lastmod>
     <image:image>
       <image:loc>https://www.alwahaagroup.com/assets/img/india_2026_og.jpg</image:loc>
-      <image:title>80th Indian Independence Day — Alwahaa Documents Clearing</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://www.alwahaagroup.com/blog/indian-passport-appointment-uae</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.74</priority>
+    <lastmod>2026-10-30</lastmod>
     <image:image>
       <image:loc>https://www.alwahaagroup.com/assets/img/passport_service_alhind_og.jpg</image:loc>
-      <image:title>Indian consular services outsourced to Al Hind Tours &amp; Travels LLC across 16 UAE ICACs</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/mainland-company-dubai</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/business-setup.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.alwahaagroup.com/blog/police-clearance-certificate-uae</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.74</priority>
+    <lastmod>2026-10-30</lastmod>
     <image:image>
       <image:loc>https://www.alwahaagroup.com/assets/img/alwahaa_gcc_pcc_og.jpg</image:loc>
-      <image:title>Police Clearance Certificate UAE employment visa guide</image:title>
     </image:image>
   </url>
-  <url><loc>https://www.alwahaagroup.com/blog/free-zone-vs-mainland-dubai</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/blog/document-attestation-uae</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/blog/corporate-tax-vat-uae</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/blog/family-visa-emirates-id-uae</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
-  <url><loc>https://www.alwahaagroup.com/blog/pro-services-dubai</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url>
+    <loc>https://www.alwahaagroup.com/blog/pro-services-dubai</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/blog/mohre.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/resources/det</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/trade-licence.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/resources/gdrfa</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/employment-visit-visa.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/resources/icp</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/emirates-id-medical.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/resources</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alwahaagroup.com/resources" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.alwahaagroup.com/ar/resources" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alwahaagroup.com/resources" />
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/corporate-pro-abdullah.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/resources/indian-passport-renewal</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/passport_service_alhind_og.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/resources/mofa</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/certificate-attestation.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/resources/mohre</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/labour-work-permit-hasim.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/tools/corporate-tax-calculator</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/svc-tax.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/tools</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/services/individual/vat-corporate-tax.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.alwahaagroup.com/tools/public-holidays-uae</loc>
+    <lastmod>2026-10-30</lastmod>
+    <image:image>
+      <image:loc>https://www.alwahaagroup.com/assets/img/dubai-hero-daylight.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>

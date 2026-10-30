@@ -5,5 +5,11 @@
   "type": "module",
   "engines": {
     "node": "24.x"
+  },
+  "scripts": {
+    "seo:update": "python3 scripts/update-seo.py",
+    "check:seo": "python3 scripts/check-seo.py",
+    "export:static": "php scripts/export-vercel-static.php && python3 scripts/update-seo.py",
+    "build:resources": "node scripts/build-resources.mjs && python3 scripts/update-seo.py"
   }
 }

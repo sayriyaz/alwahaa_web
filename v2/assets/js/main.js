@@ -338,7 +338,7 @@
   });
 
   /* ------------------------------------------------------------------ *
-   * 11. GSAP parallax (atmosphere + hero copy)
+   * 11. GSAP parallax (background atmosphere only)
    * ------------------------------------------------------------------ */
   var parallaxDone = false;
   function initParallax() {
@@ -351,7 +351,7 @@
       gsap.to(".blob.b3", { yPercent: 14, ease: "none", scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: true } });
     }
     if (doc.querySelector(".hero")) {
-      gsap.to(".hero__copy", { yPercent: 16, opacity: 0.65, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+      // Keep the headline and brand copy anchored while the background scrolls.
       gsap.to(".hero__grid", { yPercent: 24, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     }
   }
@@ -492,7 +492,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 13b. About hero — UAE map float
+   * 13b. About hero — route accents
    * ------------------------------------------------------------------ */
   var aboutFloatDone = false;
   function initAboutFloat() {
@@ -501,75 +501,41 @@
     if (!orbit) return;
     aboutFloatDone = true;
     var gsap = window.gsap;
-    var skyline = orbit.querySelector(".about-skyline");
-    if (skyline) {
-      gsap.to(skyline, { y: -10, x: 6, scale: 1.012, rotation: 0.22, transformOrigin: "68% 52%", duration: 7.2, ease: "sine.inOut", repeat: -1, yoyo: true });
-    }
-    orbit.querySelectorAll(".about-service-card").forEach(function (el, i) {
-      gsap.to(el, { y: i % 2 ? 11 : -9, x: i % 2 ? -5 : 5, rotation: i % 2 ? -0.45 : 0.45, duration: 4.8 + i * 0.42, delay: i * 0.18, ease: "sine.inOut", repeat: -1, yoyo: true });
-    });
+    // Keep the skyline and service labels stationary for comfortable reading.
     gsap.to(orbit.querySelectorAll(".about-route path"), { strokeDashoffset: -42, duration: 6, ease: "none", repeat: -1 });
   }
 
-  /* ------------------------------------------------------------------ *
-   * 13c. Home hero — gateway micro-parallax
-   * ------------------------------------------------------------------ */
-  var gatewayMotionDone = false;
-  function initGatewayMotion() {
-    if (gatewayMotionDone || prefersReduced || isTouch) return;
-    var stage = doc.querySelector(".gateway-stage");
-    var hero = doc.querySelector(".hero");
-    if (!stage || !hero) return;
-    gatewayMotionDone = true;
-    hero.addEventListener("mousemove", function (e) {
-      var box = hero.getBoundingClientRect();
-      var x = ((e.clientX - box.left) / box.width - 0.5);
-      var y = ((e.clientY - box.top) / box.height - 0.5);
-      stage.style.setProperty("--gateway-ry", (x * 4).toFixed(2) + "deg");
-      stage.style.setProperty("--gateway-rx", (y * -3).toFixed(2) + "deg");
-    });
-    hero.addEventListener("mouseleave", function () {
-      stage.style.setProperty("--gateway-ry", "0deg");
-      stage.style.setProperty("--gateway-rx", "0deg");
-    });
-  }
-
-  /* ------------------------------------------------------------------ *
-   * 14. Wrap every "Alwahaa" in the Ventoux brand font
-   * ------------------------------------------------------------------ */
-  function wrapBrandWord() {
-    var roots = [doc.querySelector("main"), doc.querySelector("footer")];
-    roots.forEach(function (root) {
-      if (!root) return;
-      var walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-        acceptNode: function (node) {
-          if (!node.nodeValue || node.nodeValue.indexOf("Alwahaa") === -1) return NodeFilter.FILTER_REJECT;
-          var p = node.parentNode;
-          if (!p) return NodeFilter.FILTER_REJECT;
-          var tag = p.nodeName;
-          if (tag === "SCRIPT" || tag === "STYLE") return NodeFilter.FILTER_REJECT;
-          if (p.closest && p.closest(".wahaa")) return NodeFilter.FILTER_REJECT;
-          return NodeFilter.FILTER_ACCEPT;
-        }
+  /* Service directory progressively enhances fully readable HTML cards. */
+  (function serviceDirectory() {
+    var filters = doc.querySelector(".service-filters");
+    if (!filters) return;
+    var cards = Array.from(doc.querySelectorAll(".service-entry"));
+    var buttons = Array.from(filters.querySelectorAll("button[data-service-filter]"));
+    var count = doc.querySelector(".service-count");
+    function filter(category) {
+      var shown = 0;
+      cards.forEach(function (card) {
+        card.hidden = category !== "all" && card.dataset.serviceCategory !== category;
+        if (!card.hidden) shown++;
       });
-      var targets = [], n;
-      while ((n = walker.nextNode())) targets.push(n);
-      targets.forEach(function (node) {
-        var parts = node.nodeValue.split("Alwahaa");
-        var frag = doc.createDocumentFragment();
-        parts.forEach(function (part, i) {
-          if (i > 0) {
-            var s = doc.createElement("span");
-            s.className = "wahaa";
-            s.textContent = "Alwahaa";
-            frag.appendChild(s);
-          }
-          if (part) frag.appendChild(doc.createTextNode(part));
-        });
-        node.parentNode.replaceChild(frag, node);
+      buttons.forEach(function (button) {
+        button.setAttribute("aria-pressed", String(button.dataset.serviceFilter === category));
       });
+      if (count) count.textContent = shown + " service" + (shown === 1 ? "" : "s") + " available";
+      // Filtering changes page height; refresh the scroll animation measurements.
+      if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+      if (lenis) lenis.resize();
+    }
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () { filter(button.dataset.serviceFilter); });
     });
-  }
+    doc.querySelectorAll("[data-browse-category]").forEach(function (link) {
+      link.addEventListener("click", function () { filter(link.dataset.browseCategory); });
+    });
+    filters.hidden = false;
+    if (count) count.hidden = false;
+    filter("all");
+  })();
 
   /* ------------------------------------------------------------------ *
    * Boot
@@ -577,10 +543,8 @@
   var booted = false;
   function start() {
     if (booted) return; booted = true;
-    wrapBrandWord();
     initTstMarquee();
     initAboutFloat();
-    initGatewayMotion();
     initReveals();
     initPointer();
   }
@@ -603,6 +567,5 @@
     initParallax();
     initHero3D();
     initAboutFloat();
-    initGatewayMotion();
   });
 })();

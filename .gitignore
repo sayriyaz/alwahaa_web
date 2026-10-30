@@ -9,3 +9,10 @@ contact/submissions.log.php
 contact/*.log
 v2/router.php
 .claude/
+
+# Retain source artwork locally; deploy only optimized, referenced assets.
+generated_images/
+
+# Python validation cache
+__pycache__/
+*.pyc

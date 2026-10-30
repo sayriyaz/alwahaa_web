@@ -170,6 +170,7 @@ $schema = [
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <script data-local-preview>(function(){var p=location.pathname;var m=p.match(/^(.*\/v2)(?:\/|$)/);if(/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)&&m){window.AW_LOCAL_BASE=m[1]+'/';document.write('<script src="'+window.AW_LOCAL_BASE+'assets/js/local-preview.js?v=20261030a"><\/script>');}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
@@ -253,6 +254,6 @@ $schema = [
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script src="./assets/js/main.js?v=20260711a" defer></script>
+  <script src="./assets/js/main.js?v=20261030b" defer></script>
 </body>
 </html>

@@ -1,0 +1,103 @@
+/* Approved daylight skyline concept. Scoped to the homepage hero. */
+.skyline-hero.hero { position:relative;isolation:isolate;min-height:760px;height:auto;padding:170px 0 80px;overflow:hidden;background:#faf9f5;color:#202328; }
+.skyline-hero.hero::before,.skyline-hero.hero::after{display:none}
+.skyline-scene{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.skyline-photo{width:100%;height:100%;object-fit:cover;object-position:center;max-width:none;transform:scale(1.035) translate3d(var(--scene-x,0px),var(--scene-y,0px),0);transition:transform 1.6s ease-out;will-change:transform}
+.skyline-layout{display:grid;grid-template-columns:46% 54%;gap:0;align-items:start;max-width:1410px;width:calc(100% - 11%);margin:auto;position:relative}
+.skyline-copy{position:relative;z-index:2}
+.skyline-copy .eyebrow{color:#292d32;font-size:10px;letter-spacing:.32em;margin:0 0 28px;font-weight:500}
+.skyline-copy .eyebrow::before{background:#a8884c;width:40px}
+.skyline-hero h1{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-weight:700;font-size:clamp(64px,6.1vw,98px);line-height:.99;letter-spacing:-.065em;margin:0 0 26px;color:#202328}
+.skyline-hero h1 span{color:#987947}
+.skyline-intro{font-family:Inter,sans-serif;font-size:clamp(16px,1.4vw,22px);line-height:1.55;color:#73757a;letter-spacing:-.025em;max-width:510px;margin:0 0 34px}
+.skyline-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.skyline-actions .btn{border-radius:4px;font-size:14px;font-weight:500;min-height:60px;padding:16px 26px;display:inline-flex;gap:22px;justify-content:space-between;box-shadow:none}
+.skyline-actions .btn--primary{background:#202328;border:1px solid #202328;color:#fff}
+.skyline-actions .btn--primary img{filter:brightness(0) invert(1)}
+.skyline-contact{background:rgba(250,249,245,.5);border:1px solid #967b4e;color:#202328}
+.skyline-actions .btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #20232815}
+.skyline-trust{display:flex;align-items:center;gap:27px;margin-top:40px;font-size:14px;color:#3c4148}
+.skyline-trust span{display:flex;align-items:center;gap:12px}
+.skyline-trust span+span{border-left:1px solid #cbbd9f;padding-left:26px}
+.skyline-services{position:relative;height:500px;z-index:3}
+.skyline-tile{position:absolute;display:flex;align-items:center;gap:18px;padding:21px 22px;min-width:260px;background:rgba(255,253,248,.93);border:1px solid rgba(255,255,255,.85);border-radius:8px;box-shadow:0 12px 35px #3b30261c;backdrop-filter:blur(10px);color:#202328;animation:skylineFloat 9s ease-in-out infinite;transition:box-shadow .3s}
+.skyline-tile span{display:grid;gap:5px}.skyline-tile b{font-size:14px;font-weight:600;letter-spacing:-.025em}.skyline-tile small{font-size:12px;color:#777b80}.skyline-tile .tile-arrow{margin-left:auto}.skyline-tile--setup{top:4%;left:5%}.skyline-tile--visa{top:21%;right:-1%;animation-delay:-3s}.skyline-tile--pro{top:72%;right:-4%;animation-delay:-6s}
+.skyline-tile:hover{animation-play-state:paused;box-shadow:0 14px 38px #3b302633}.skyline-tile:focus-visible{outline:3px solid #a8884c;outline-offset:5px}
+@keyframes skylineFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+[data-theme="dark"] .skyline-hero{background:#faf9f5;color:#202328}
+@media(min-width:1600px){.skyline-hero.hero{min-height:830px;padding-top:190px}.skyline-services{height:550px}}
+@media(max-width:1100px){.skyline-layout{grid-template-columns:51% 49%;width:90%}.skyline-hero.hero{min-height:730px;padding-top:150px}.skyline-hero h1{font-size:72px}.skyline-intro{font-size:17px}.skyline-tile{min-width:225px;padding:17px 16px;gap:10px}.skyline-tile b{font-size:13px}.skyline-tile--setup{left:0;top:4%}.skyline-tile--visa{top:30%;right:-3%}.skyline-tile--pro{top:65%;right:-3%}.skyline-actions{gap:12px}.skyline-actions .btn{padding:14px 18px;font-size:12px;gap:12px}.skyline-trust{font-size:12px;gap:14px}.skyline-trust span+span{padding-left:14px}}
+@media(max-width:760px){.skyline-hero.hero{padding:125px 0 30px;min-height:0}.skyline-layout{display:block;width:88%}.skyline-copy .eyebrow{font-size:8px;letter-spacing:.22em;margin-bottom:24px}.skyline-hero h1{font-size:clamp(52px,11.5vw,76px);max-width:500px}.skyline-intro{font-size:16px;max-width:440px;color:#4f545a}.desktop-break{display:none}.skyline-photo{object-position:65% bottom;opacity:.35}.skyline-actions{gap:10px}.skyline-actions .btn{min-height:52px;padding:12px 16px;font-size:12px}.skyline-trust{margin-top:28px;font-size:11px;gap:12px}.skyline-trust span{gap:7px}.skyline-trust img{width:22px}.skyline-trust span+span{padding-left:12px}.skyline-services{height:auto;margin-top:38px;display:grid;gap:10px}.skyline-tile{position:relative;inset:auto;min-width:0;padding:14px 18px;animation:none;background:rgba(255,253,248,.95)}.skyline-tile>img{width:28px;height:28px}.skyline-tile .tile-arrow{width:20px;height:20px}.skyline-tile b{font-size:14px}.skyline-tile small{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.skyline-tile{animation:none}.skyline-photo{transition:none;transform:none;will-change:auto}}
+/* Align the live header and hero with the selected desktop composition. */
+body:has(.skyline-hero) .site-header .nav { width:89%;max-width:1410px;margin-inline:auto;padding-inline:0; }
+.skyline-layout{padding-inline:0}
+.skyline-hero h1{font-size:clamp(64px,5.6vw,92px)}
+.skyline-hero.hero{padding-top:180px;min-height:830px}
+@media(max-width:1100px){.skyline-hero.hero{padding-top:150px;min-height:730px}.skyline-hero h1{font-size:72px}}
+@media(max-width:760px){.skyline-hero.hero{padding-top:125px;min-height:0}.skyline-hero h1{font-size:clamp(52px,11.5vw,76px)}body:has(.skyline-hero) .site-header .nav{width:90%}}
+.skyline-photo{object-position:center top}
+body:has(.skyline-hero) .brand img[src$="lockup.png"]{width:190px;max-height:78px}
+@media(max-width:760px){body:has(.skyline-hero) .brand img[src$="lockup.png"]{width:145px;max-height:65px}}
+body:has(.skyline-hero) .site-header:not(.is-scrolled) .nav__links a,
+body:has(.skyline-hero) .site-header:not(.is-scrolled) .lang-switch,
+body:has(.skyline-hero) .site-header:not(.is-scrolled) .theme-toggle{color:#292d32}
+body:has(.skyline-hero) .site-header:not(.is-scrolled) .menu-toggle span{background:#292d32}
+/* Full original tile set, spaced around the daylight skyline. */
+.skyline-services{height:540px}
+.skyline-tile{min-width:225px;padding:19px 18px;gap:14px;border-radius:16px;animation:skylineDrift 7s ease-in-out infinite alternate}
+.skyline-tile--setup{top:0;left:auto;right:5%;animation-delay:-1s}
+.skyline-tile--visa{top:26%;right:-1%;animation-duration:8s;animation-delay:-4s}
+.skyline-tile--pro{top:52%;right:3%;animation-duration:9s;animation-delay:-6s}
+.skyline-tile--bank{top:78%;right:0;animation-duration:8s;animation-delay:-2s}
+.skyline-tile--document{min-width:150px;padding:18px 22px;background:rgba(255,253,248,.9)}
+.skyline-tile--document span{gap:8px}.skyline-tile--document b{font-size:15px}.skyline-tile--document b::before{content:"";display:block;width:26px;height:3px;background:#c3a566;border-radius:2px;margin-bottom:7px}.skyline-tile--document small{text-transform:uppercase;font-size:10px;letter-spacing:.14em;color:#697480}
+.skyline-tile--trade{top:15%;left:6%;animation-duration:8s;animation-delay:-3s}
+.skyline-tile--file{top:44%;left:0;animation-duration:9s;animation-delay:-1s}
+.skyline-tile--attestation{top:73%;left:7%;animation-duration:7s;animation-delay:-5s}
+@keyframes skylineDrift{0%{transform:translate3d(-3px,7px,0) rotate(-.5deg)}100%{transform:translate3d(4px,-9px,0) rotate(.5deg)}}
+@media(min-width:761px) and (max-width:1100px){.skyline-tile{min-width:185px;padding:16px 12px;gap:8px}.skyline-tile>img{width:28px;height:28px}.skyline-tile .tile-arrow{width:17px}.skyline-tile b{font-size:12px}.skyline-tile small{font-size:10px}.skyline-tile--document{min-width:125px;padding:15px}.skyline-tile--trade,.skyline-tile--file,.skyline-tile--attestation{left:-2%}.skyline-tile--setup,.skyline-tile--visa,.skyline-tile--pro,.skyline-tile--bank{right:-5%}}
+@media(max-width:760px){.skyline-services{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;margin-top:38px;padding:8px 0}.skyline-tile{inset:auto;min-width:0;padding:15px 12px;gap:9px;animation:skylineMobileFloat 6s ease-in-out infinite alternate}.skyline-tile>img{width:23px;height:23px}.skyline-tile .tile-arrow{display:none}.skyline-tile b{font-size:13px}.skyline-tile small{font-size:10px;line-height:1.4}.skyline-tile--document{padding:15px 18px}.skyline-tile--document b{font-size:13px}.skyline-tile--document small{font-size:9px}.skyline-tile--attestation{grid-column:1 / -1;justify-self:center;width:60%}.skyline-tile:nth-child(even){animation-delay:-3s}}
+@keyframes skylineMobileFloat{from{transform:translateY(3px)}to{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.skyline-tile{animation:none!important}}
+/* About opening: the same daylight language, with the company's story in focus. */
+.about-daylight h1{font-size:clamp(48px,4.5vw,74px);line-height:1.03;letter-spacing:-.055em}
+.about-daylight .skyline-intro{font-size:18px;line-height:1.65;max-width:535px}
+.about-daylight.hero{min-height:800px}
+.about-legacy-notes{position:relative;min-height:500px}
+.legacy-note{position:absolute;padding:26px 30px;border:1px solid #fff9;border-radius:14px;background:rgba(255,253,248,.93);box-shadow:0 15px 40px #3b302618;backdrop-filter:blur(10px);color:#202328}
+.legacy-note small{display:block;font-size:9px;letter-spacing:.17em;color:#8e7444;margin-bottom:12px}
+.legacy-note strong{display:block;font-family:Inter,sans-serif;font-size:72px;font-weight:500;letter-spacing:-.07em;line-height:1;margin-bottom:12px}
+.legacy-note span{font-size:15px;color:#6d7378}
+.legacy-note--start{top:4%;left:12%;animation:skylineDrift 9s ease-in-out infinite alternate}
+.legacy-note--today{bottom:8%;right:0;animation:skylineDrift 8s ease-in-out -4s infinite alternate}
+.legacy-note b{font-size:20px;line-height:1.4;letter-spacing:-.025em;display:block}
+.legacy-note a{display:flex;align-items:center;gap:20px;color:#876b3d;font-size:12px;margin-top:18px}
+.about-facts{padding:12px 0 30px;background:var(--bg)}.about-facts .about-hero__stats{margin-top:0;box-shadow:none;background:var(--bg-elevated)}
+@media(max-width:1100px) and (min-width:761px){.about-daylight h1{font-size:52px}.about-daylight .skyline-intro{font-size:16px}.legacy-note{padding:22px}.legacy-note--start{left:8%}.legacy-note--today{right:-3%}}
+@media(max-width:760px){.about-daylight.hero{min-height:0}.about-daylight h1{font-size:clamp(42px,9.5vw,64px)}.about-daylight .skyline-intro{font-size:16px}.about-legacy-notes{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:35px}.legacy-note{position:relative;inset:auto;padding:20px 16px;animation:none}.legacy-note strong{font-size:52px}.legacy-note small{font-size:8px;line-height:1.5}.legacy-note span{font-size:12px}.legacy-note b{font-size:15px}.legacy-note a{font-size:11px;gap:8px;line-height:1.4}.about-facts .about-hero__stats{grid-template-columns:1fr 1fr;padding:12px}.about-facts .about-hero__stat{border-right:0;padding:12px;min-height:70px}.about-facts .about-hero__stat:last-child{grid-column:1 / -1}.about-facts .about-hero__stat strong{font-size:26px}}
+@media(prefers-reduced-motion:reduce){.legacy-note{animation:none!important}}
+/* About has its own Creek-side office photograph and original four service floats. */
+.about-service-floats{position:relative;height:540px}
+.about-float{position:absolute;display:flex;align-items:center;gap:16px;width:235px;padding:22px 20px;background:rgba(255,253,248,.94);border:1px solid #fff;border-radius:18px;box-shadow:0 16px 38px #26344220;backdrop-filter:blur(10px);color:#202328;animation:skylineDrift 8s ease-in-out infinite alternate;transition:box-shadow .3s}
+.about-float span{display:grid;gap:8px}.about-float b{font-size:13px;text-transform:uppercase;letter-spacing:.06em}.about-float small{font-size:13px;color:#606973;line-height:1.5}.about-float img{flex-shrink:0}
+.about-float--licence{top:4%;left:2%;animation-delay:-2s}.about-float--residency{top:27%;right:-1%;animation-duration:9s;animation-delay:-5s}.about-float--attestation{top:57%;left:0;animation-duration:7s;animation-delay:-1s}.about-float--pro{top:80%;right:0;animation-duration:8s;animation-delay:-4s}
+.about-float:hover{box-shadow:0 20px 42px #26344230}.about-float:focus-visible{outline:3px solid #a8884c;outline-offset:5px}
+@media(min-width:761px) and (max-width:1100px){.about-float{width:200px;padding:18px 14px;gap:10px}.about-float b{font-size:11px}.about-float small{font-size:11px}.about-float--residency,.about-float--pro{right:-5%}}
+@media(max-width:760px){.about-service-floats{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;margin-top:38px;padding:8px 0}.about-float{position:relative;inset:auto;width:auto;min-width:0;padding:17px 12px;gap:9px;animation:skylineMobileFloat 6s ease-in-out infinite alternate}.about-float img{width:24px;height:24px}.about-float b{font-size:10px;letter-spacing:.04em}.about-float small{font-size:11px}.about-float:nth-child(even){animation-delay:-3s}}
+@media(prefers-reduced-motion:reduce){.about-float{animation:none!important}}
+/* Selected heritage-to-present About concept. */
+.about-creek .skyline-layout{grid-template-columns:40% 60%;width:91%;max-width:1450px}
+.about-creek.hero{padding-top:160px;min-height:830px}
+.about-creek h1{font-size:clamp(62px,5.8vw,94px);line-height:.99;letter-spacing:-.055em;margin-bottom:24px}
+.about-creek .skyline-intro{max-width:465px;font-size:18px;line-height:1.55;color:#555e65;margin-bottom:30px}
+.about-creek .eyebrow{font-size:11px;letter-spacing:.2em;color:#9d7b35}.about-creek .eyebrow::before{display:none}
+.about-creek .skyline-actions .btn{min-height:58px;padding-inline:28px;font-size:15px}
+.creek-trust{margin-top:34px;gap:22px}.creek-trust strong{font:500 64px/1 Georgia,serif;color:#a27d35;letter-spacing:-.05em}.creek-trust span{display:block;border-left:1px solid #cbbd9f;padding-left:22px;font-size:16px;line-height:1.4;color:#58616b}
+.about-creek .about-service-floats{height:550px}
+.about-creek .about-float{display:block;width:218px;padding:22px 24px;border-radius:18px;background:rgba(255,253,248,.94)}
+.about-creek .about-float>img{width:36px;height:36px;margin-bottom:12px}.about-creek .about-float b{font-size:13px}.about-creek .about-float small{font-size:13px}
+.about-creek .about-float--licence{top:0;left:19%}.about-creek .about-float--residency{top:2%;right:3%}.about-creek .about-float--attestation{top:76%;left:4%}.about-creek .about-float--pro{top:76%;right:1%}
+@media(min-width:761px) and (max-width:1100px){.about-creek h1{font-size:64px}.about-creek .skyline-layout{grid-template-columns:44% 56%}.about-creek .about-float{width:190px;padding:20px}.about-creek .about-float--licence{left:2%}.about-creek .about-float--residency{top:28%;right:0}.about-creek .about-float--attestation{top:56%;left:0}.about-creek .about-float--pro{top:83%;right:0}.about-creek .skyline-intro{font-size:16px}.about-creek.hero{min-height:850px}}
+@media(max-width:760px){.about-creek.hero{padding-top:125px;min-height:0}.about-creek .skyline-layout{display:block;width:88%}.about-creek h1{font-size:clamp(52px,12vw,72px)}.about-creek .skyline-intro{font-size:16px}.about-creek .eyebrow{font-size:9px}.about-creek .skyline-actions .btn{font-size:13px;min-height:52px}.creek-trust strong{font-size:52px}.creek-trust span{font-size:14px}.about-creek .about-service-floats{height:auto}.about-creek .about-float{inset:auto;width:auto;padding:18px 15px}.about-creek .about-float>img{width:30px;height:30px}.about-creek .about-float b{font-size:11px}.about-creek .about-float small{font-size:11px}.about-creek .skyline-photo{object-position:65% center}}
+.about-creek .skyline-intro{max-width:445px}
