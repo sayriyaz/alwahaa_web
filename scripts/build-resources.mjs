@@ -188,11 +188,11 @@ ${nav(P)}
           </div>
 
           <div class="article__body" data-reveal style="margin-top:1.6rem">
-            <h2>${esc(whatHeading)}</h2>
+            ${a.noticeHtml ? `<p class="res-notice" role="note" style="margin:0 0 1.6rem;padding:1rem 1.2rem;border:1px solid var(--line-strong);border-left:4px solid var(--gold);border-radius:var(--r-lg);font-size:1rem">${a.noticeHtml}</p>\n            ` : ""}<h2>${esc(whatHeading)}</h2>
             ${a.whatIs.map((p) => `<p>${esc(p)}</p>`).join("\n            ")}
             ${a.calloutHtml ? `<p style="font-size:1.05rem">${a.calloutHtml}</p>` : ""}
 
-            <h2 style="margin-top:2.4rem">Services</h2>
+            <h2 style="margin-top:2.4rem">${esc(label(a, "servicesHeading", "Services"))}</h2>
             <ul class="res-check">${a.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>
 ${a.feeTable ? `
             <h2 id="fees" style="margin-top:2.4rem;scroll-margin-top:6rem">${esc(a.feeTable.heading)}</h2>
@@ -222,14 +222,14 @@ ${(a.extraTables || []).map((t) => `
             <a class="btn btn--ghost res-official" href="${a.officialUrl}" target="_blank" rel="noopener nofollow">${esc(officialLabel)}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
             </a>
-            <p class="res-note">Information is provided for general guidance and was last reviewed ${esc(data.lastReviewed)}. Official requirements, fees and processes are set by ${esc(noteAuthority)} and may change — always confirm on the official website. Alwahaa Documents Clearing LLC is a private service provider and is not affiliated with ${esc(noteAuthority)} or any government authority.</p>
+            <p class="res-note">Information is provided for general guidance and was last reviewed ${esc(a.lastReviewed || data.lastReviewed)}. Official requirements, fees and processes are set by ${esc(noteAuthority)} and may change — always confirm on the official website. Alwahaa Documents Clearing LLC is a private service provider and is not affiliated with ${esc(noteAuthority)} or any government authority.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section-pad">
-      <div class="container cta"><div class="cta__card" data-reveal="scale"><p class="eyebrow" style="justify-content:center">Need assistance?</p><h2>${esc(ctaHeading)}</h2><p class="lead">${esc(ctaLead)}</p><div class="cta__actions"><a class="btn btn--gold btn--lg" href="${P.contact}">Contact Alwahaa</a><a class="btn btn--ghost btn--lg" href="${P.resHub}">Back to directory</a></div>
+      <div class="container cta"><div class="cta__card" data-reveal="scale"><p class="eyebrow" style="justify-content:center">Need assistance?</p><h2>${esc(ctaHeading)}</h2><p class="lead">${esc(ctaLead)}</p><div class="cta__actions">${a.labels && a.labels.ctaPrimaryHref ? `<a class="btn btn--gold btn--lg" href="${a.labels.ctaPrimaryHref}" target="_blank" rel="noopener">${esc(a.labels.ctaPrimaryLabel)}</a>` : `<a class="btn btn--gold btn--lg" href="${P.contact}">Contact Alwahaa</a>`}<a class="btn btn--ghost btn--lg" href="${P.resHub}">Back to directory</a></div>
         <div class="res-related">${a.relatedServices.map((r) => `<a href="${r.href}">${esc(r.label)}</a>`).join("")}</div>
       </div></div>
     </section>

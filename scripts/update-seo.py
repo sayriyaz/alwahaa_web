@@ -89,7 +89,7 @@ IMAGES={
  '/resources/gdrfa':('services/individual/employment-visit-visa.webp','Passport and documents prepared for a Dubai visa consultation'),
  '/resources/mohre':('services/individual/labour-work-permit-hasim.webp','Employment contract and work permit consultation illustration'),
  '/resources/mofa':('services/individual/certificate-attestation.webp','Certificates prepared for UAE attestation'),
- '/resources/indian-passport-renewal':('passport_service_alhind_og.jpg','Indian passport and consular services guide in the UAE'),
+ '/resources/indian-consular-services':('passport_service_alhind_og.jpg','Indian passport and consular services guide in the UAE'),
  '/tools':('services/individual/vat-corporate-tax.webp','UAE business paperwork and tax planning tools'),
  '/tools/public-holidays-uae':('dubai-hero-daylight.webp','Dubai skyline accompanying the UAE public holidays calendar'),
 }

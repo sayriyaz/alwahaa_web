@@ -336,30 +336,33 @@
       "metaDescription": "MOFA attests documents for use in and outside the UAE. Attestation steps, FAQs — and how Alwahaa completes the chain for you."
     },
     {
-      "slug": "indian-passport-renewal",
-      "name": "Passport Renewal (Indian Citizens)",
+      "slug": "indian-consular-services",
+      "name": "Indian Consular Services (Al Hind)",
       "abbr": "Indian Embassy Services",
       "flag": "🇮🇳",
       "category": "Embassy & Consular",
-      "tagline": "Passport renewal, PCC, visa, attestation and consular support for Indian citizens in the UAE.",
-      "metaTitle": "Indian Passport Renewal UAE",
-      "metaDescription": "Indian passport, visa and attestation services in the UAE move to Al Hind Tours & Travels from 22 July 2026 across 16 ICACs — portal, fees and FAQs.",
+      "tagline": "Information guide to Indian passport, PCC, visa, OCI and attestation services — provided only by Al Hind Tours & Travels LLC at 16 ICACs.",
+      "metaTitle": "Indian Passport & Consular UAE: Al Hind Guide",
+      "metaDescription": "Information guide: Indian passport, PCC, visa and attestation services in the UAE are handled only by Al Hind Tours & Travels at 16 ICACs. Portal, fees, FAQs.",
       "labels": {
-        "breadcrumb": "Passport Renewal (Indian Citizens)",
-        "card": "Passport Renewal (Indian Citizens)",
-        "footer": "Indian Passport Renewal",
-        "h1": "Passport Renewal (Indian Citizens) — Indian Embassy Services",
-        "whatHeading": "Passport Renewal for Indian citizens in the UAE",
-        "whenHeading": "When do you need Indian passport renewal support?",
+        "breadcrumb": "Indian Consular Services (Al Hind)",
+        "card": "Indian Consular Services (Al Hind)",
+        "footer": "Indian Consular Services",
+        "h1": "Indian Passport & Consular Services in the UAE — Al Hind Guide",
+        "whatHeading": "How Indian consular services work in the UAE",
+        "whenHeading": "When should you visit an ICAC?",
         "officialLink": "Visit the official Embassy of India UAE website",
         "noteAuthority": "the Embassy of India, Consulate General of India and appointed official service provider",
         "provider": "Embassy of India in Abu Dhabi",
         "schemaAlternate": "Indian Embassy Services UAE",
-        "ctaHeading": "Need help preparing your Indian passport renewal?",
-        "ctaLead": "Alwahaa can help prepare your documents, explain the checklist and guide the booking steps while the official appointment and final decision remain with the Embassy, Consulate and appointed provider."
+        "ctaHeading": "Apply for Indian passport and PCC services with Al Hind",
+        "ctaLead": "Book your appointment directly at consularsevainuae.com. Alwahaa does not handle Indian passport or PCC applications. For UAE MOFA attestation, legal translation, visas or business setup, our Dubai desk can help.",
+        "servicesHeading": "Services available at ICACs (provided by Al Hind)",
+        "ctaPrimaryLabel": "Book at consularsevainuae.com",
+        "ctaPrimaryHref": "https://consularsevainuae.com"
       },
       "whatIs": [
-        "Indian Embassy and Consulate services in the UAE support Indian citizens and applicants with passport renewal or reissue, Police Clearance Certificate (PCC), visa, OCI, attestation and other consular services.",
+        "Indian passport renewal or reissue, Police Clearance Certificate (PCC), visa, OCI, attestation and other consular services for Indian citizens in the UAE are provided by the Embassy of India, Abu Dhabi and the Consulate General of India, Dubai through their appointed service provider.",
         "Major update (21 July 2026): the Embassy of India, Abu Dhabi has notified that Indian Consular, Passport, Visa & Attestation services in the UAE are being outsourced to a new provider, Al Hind Tours & Travels LLC, with effect from 22 July 2026. Services will be provided at 16 Indian Consular Application Centres (ICACs) across the UAE.",
         "From 22 July 2026, these services will no longer be available at the Embassy of India, Abu Dhabi or the Consulate General of India, Dubai premises directly — applicants must use an ICAC.",
         "Appointments are booked online at the new official portal, consularsevainuae.com. New appointment slots are released twice daily, at 9:00 am and 9:00 pm. ICACs are open daily from 8:00 am to 6:00 pm, and entry is allowed only 15 minutes before the appointment time."
@@ -368,7 +371,7 @@
         "Indian passport renewal and reissue",
         "Police Clearance Certificate (PCC)",
         "Indian visa and OCI services",
-        "Document attestation and consular services",
+        "Consular attestation of Indian documents",
         "Online appointment booking at consularsevainuae.com",
         "Walk-in service for Tatkal, newborn, Emergency Certificate and senior citizen cases"
       ],
@@ -377,7 +380,7 @@
         "You need a passport reissue for name, address, spouse or personal-detail changes.",
         "You need a PCC for immigration, employment or residency requirements.",
         "You require embassy or consular attestation for Indian documents, or an OCI service.",
-        "You need help finding your nearest ICAC and booking the correct appointment slot on the new portal."
+        "You need to find your nearest ICAC and book the correct appointment category on consularsevainuae.com."
       ],
       "faqs": [
         {
@@ -397,14 +400,14 @@
           "a": "Government of India fees (from 1 July 2026): fresh or reissue of a 36-page passport AED 450 (Tatkal AED 900), 60-page AED 630 (Tatkal AED 1,080), lost or damaged replacements from AED 900, minors from AED 325 (under-8s AED 295), Emergency Certificate AED 60, PCC and miscellaneous certificates AED 145. In addition, the outsourced provider (Al Hind Tours & Travels LLC) charges a service fee of AED 19 (inclusive of VAT) covering form filling, photograph, typing, photocopy/printing and domestic courier."
         },
         {
-          "q": "Can Alwahaa complete the process for me?",
-          "a": "Alwahaa can help you prepare documents, fill the online form, identify your nearest ICAC, book the appointment slot and support related attestation or administrative paperwork. The official application, appointment and final decision remain with the Embassy, Consulate and the appointed outsourced service provider."
+          "q": "Does Alwahaa process Indian passport or PCC applications?",
+          "a": "No. Alwahaa Documents Clearing LLC does not process Indian passport, PCC, visa, OCI or consular attestation applications, and does not book ICAC appointments on your behalf. Apply directly with Al Hind Tours & Travels LLC at consularsevainuae.com or at any of the 16 ICACs. Once your Indian documents have been attested at an ICAC, Alwahaa can help with the UAE side, such as MOFA attestation and legal translation."
         }
       ],
       "officialUrl": "https://www.indembassyuae.gov.in/",
       "relatedServices": [
         {
-          "label": "Document attestation support",
+          "label": "UAE MOFA attestation support",
           "href": "../blog/document-attestation-uae"
         },
         {
@@ -419,18 +422,20 @@
       "keywords": [
         "indian embassy",
         "india embassy uae",
-        "indian passport renewal",
         "passport reissue",
         "pcc",
         "police clearance certificate",
-        "bls international",
         "indian consulate dubai",
         "visa",
         "attestation",
         "consular services",
         "indian passport fees uae",
         "passport fee revision 2026",
-        "indian embassy direct services"
+        "al hind tours and travels",
+        "consularsevainuae",
+        "icac uae",
+        "indian pcc uae",
+        "indian consular services uae"
       ],
       "feeTable": {
         "heading": "Government of India passport fees (from 1 July 2026)",
@@ -598,7 +603,9 @@
           "note": "16 ICACs open daily 8:00 am – 6:00 pm. Book appointments at consularsevainuae.com — new slots release at 9:00 am and 9:00 pm daily. Entry allowed only 15 minutes before appointment time."
         }
       ],
-      "calloutHtml": "<strong>Book your appointment online through the new official portal:</strong> <a href=\"https://consularsevainuae.com\" target=\"_blank\" rel=\"noopener\">https://consularsevainuae.com</a>"
+      "calloutHtml": "<strong>Book your appointment online through the new official portal:</strong> <a href=\"https://consularsevainuae.com\" target=\"_blank\" rel=\"noopener\">https://consularsevainuae.com</a>",
+      "lastReviewed": "2026-11",
+      "noticeHtml": "<strong>Important:</strong> Alwahaa Documents Clearing LLC does <strong>not</strong> process Indian passport, PCC, visa, OCI or consular attestation applications. These are handled only by <strong>Al Hind Tours &amp; Travels LLC</strong>, the Embassy of India&#x27;s appointed service provider, at its 16 ICACs. Apply and book directly at <a href=\"https://consularsevainuae.com\" target=\"_blank\" rel=\"noopener\">consularsevainuae.com</a>. This page is an independent information guide."
     }
   ]
 }
